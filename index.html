@@ -1,0 +1,1411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Henry Okolie | Senior QA Engineer</title>
+<meta name="description" content="Henry Okolie, Senior QA Engineer in Lagos. Test automation with Selenium, Python, Appium and Postman for fintech and banking products.">
+<meta property="og:title" content="Henry Okolie | Senior QA Engineer">
+<meta property="og:description" content="I find the bugs before your users do. Fintech QA, test automation, API and performance testing.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#030014">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23A855F7'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23030014'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='800' font-size='26' fill='url(%23g)'%3EHO%3C/text%3E%3C/svg%3E">
+<style>:root{color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: the user's second mockup. Dark navy and blue; hero, tools strip, about + stat grid, tools, projects, horizontal journey, three closing cards, footer nav. */
+:root{
+  --bg:#030014; --bg-2:#07031C; --card:rgba(17,10,44,.72); --card-2:rgba(30,18,70,.7); --line:rgba(124,82,255,.22); --fg:#F5F3FF; --muted:#B3ACD0; --dim:#7E77A3;
+  --blue:#A07CFF; --blue-2:#7C4DFF; --blue-soft:rgba(140,96,255,.15); --blue-line:rgba(160,124,255,.5);
+  --violet:#8B5CF6; --indigo:#6366F1; --cyan:#22D3EE;
+  --f:"Manrope", "Segoe UI", Roboto, Arial, sans-serif; --f-hand:"Caveat", "Segoe Print", cursive;
+  color-scheme:dark;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--f);font-size:16px;line-height:1.6}
+.in{max-width:1140px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{margin:0;line-height:1.15;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+svg.i{width:20px;height:20px;flex:none}
+.kicker{display:flex;align-items:center;gap:12px;color:var(--blue);font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.kicker.bar::before{content:"";width:26px;height:3px;border-radius:3px;background:var(--blue)}
+.h2{font-size:clamp(1.6rem,3vw,2rem);font-weight:800;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 .95rem var(--f);padding:13px 26px;border-radius:9px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn.solid{background:linear-gradient(90deg,#7C3AED,#4F46E5);color:#fff;border-color:rgba(196,170,255,.35);box-shadow:0 0 0 1px rgba(124,58,237,.3),0 10px 30px -10px rgba(124,58,237,.8)}
+.btn.solid:hover{box-shadow:0 0 0 1px rgba(160,124,255,.6),0 12px 36px -8px rgba(139,92,246,.95)}
+.btn.line{border-color:#E4EAF3;color:var(--fg);background:transparent}
+.btn.line:hover{border-color:var(--blue);color:var(--blue)}
+.btn.blue{border-color:var(--blue-line);color:var(--blue);background:transparent;padding:9px 18px;font-size:.88rem;white-space:nowrap}
+.btn.blue:hover{background:var(--blue-soft);border-color:var(--blue)}
+.sq{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--fg);text-decoration:none}
+.sq:hover{border-color:var(--blue);color:var(--blue)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px}
+section{padding-block:44px}
+.sec-top{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px 32px;align-items:end;margin-bottom:24px}
+.sec-top > p{color:var(--muted);font-size:.95rem;max-width:44ch;justify-self:end}
+.link{background:none;border:0;padding:0;color:var(--blue);font:700 .92rem var(--f);cursor:pointer;text-align:left;display:inline-flex;gap:8px;align-items:center;text-decoration:none}
+.link:hover{text-decoration:underline}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(3,0,20,.45);backdrop-filter:blur(14px);border-bottom:1px solid transparent;box-shadow:0 1px 0 rgba(160,124,255,.18),0 10px 40px -20px rgba(124,58,237,.6)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--bg)}
+.nav .in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{font-weight:800;font-size:1.8rem;letter-spacing:-.07em;line-height:1}
+.logo b{color:var(--blue)}
+.brand strong{display:block;font-size:.98rem;line-height:1.2}
+.brand small{display:block;color:var(--muted);font-size:.78rem}
+.links{display:flex;gap:30px;padding:9px 30px;border:1px solid var(--blue-line);border-radius:999px;background:rgba(3,0,20,.55);box-shadow:inset 0 0 20px rgba(124,58,237,.18),0 0 40px -12px rgba(139,92,246,.7)}
+.links a{text-decoration:none;font-size:.88rem;font-weight:600;color:#D9E0EB;padding-block:6px;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{color:#fff;border-color:transparent;text-shadow:0 0 14px rgba(196,170,255,.9)}
+.cv{border:1.5px solid var(--blue-line);color:var(--blue);border-radius:9px;padding:8px 16px;font-size:.85rem;font-weight:700;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.cv:hover{background:var(--blue-soft)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:0;background:linear-gradient(transparent 0 0)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(150,104,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(150,104,255,.06) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(60% 80% at 70% 40%,#000,transparent);mask-image:radial-gradient(60% 80% at 70% 40%,#000,transparent);pointer-events:none}
+.hero .in{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:end}
+.hero-copy{padding-block:44px}
+.hero .kicker{gap:14px;letter-spacing:.18em;color:var(--muted);font-weight:700}
+.hero .kicker i{font-style:normal;color:var(--blue)}
+.hero h1{font-size:clamp(2.6rem,6vw,4rem);font-weight:800;letter-spacing:-.02em;line-height:1.04;margin-top:14px}
+.hero .lede{color:#C9D2E0;margin-top:20px;max-width:52ch;font-size:1.05rem}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.socials{display:flex;gap:12px;margin-top:22px}
+.pic{position:relative;align-self:stretch;display:flex;justify-content:center;align-items:flex-end;min-width:0}
+.pic img{display:block;width:100%;max-width:470px;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent),linear-gradient(to right,transparent,#000 10%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 85%,transparent),linear-gradient(to right,transparent,#000 10%);mask-composite:intersect}
+.hand{position:absolute;right:0;top:44px;font-family:var(--f-hand);font-size:1.75rem;line-height:1.15;color:#B8C4D6;transform:rotate(-10deg);text-align:right}
+.hand::after{content:"";display:block;width:64px;height:2px;background:#B8C4D6;margin:10px 0 0 auto;transform:rotate(-14deg)}
+.float{position:absolute;right:0;bottom:56px;display:flex;gap:14px;align-items:center;padding:16px 18px;background:rgba(11,20,38,.92);border:1px solid var(--line);border-radius:12px;font-size:.9rem;font-weight:600;line-height:1.3;max-width:180px}
+.float svg{color:var(--blue);width:28px;height:28px}
+
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(7,3,28,.55);backdrop-filter:blur(6px)}
+.strip .in{display:flex;align-items:center;gap:14px 32px;flex-wrap:wrap;padding-block:14px}
+.strip .lab{border:1px solid var(--line);border-radius:7px;padding:6px 12px;font-size:.84rem;font-weight:600;background:var(--card)}
+.strip span.t{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:600}
+.dot{width:24px;height:24px;border-radius:6px;display:inline-grid;place-items:center;font-size:.62rem;font-weight:800;color:#fff}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,.95fr);gap:28px;align-items:center}
+.about-grid > *{min-width:0}
+.about-img{border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.about-img img{display:block;width:100%;height:auto}
+.about-txt h2{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:800;margin-top:10px}
+.about-txt p.body{color:var(--muted);margin-top:14px}
+.about-txt .more{color:var(--muted);margin-top:12px}
+.about-txt .btn{margin-top:20px}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.st{padding:16px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center}
+.st svg{width:30px;height:30px;color:var(--blue)}
+.st b{display:block;font-size:1.45rem;font-weight:800;line-height:1.1}
+.st span{color:var(--muted);font-size:.8rem;line-height:1.3;display:block}
+
+/* Tools */
+.tools{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px}
+.tool{display:grid;justify-items:center;align-content:center;gap:10px;padding:18px 8px 16px;text-align:center;font-size:.86rem;font-weight:600;line-height:1.3;transition:border-color .2s,transform .2s}
+.tool:hover{border-color:var(--blue);transform:translateY(-3px)}
+.mono{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;font-weight:800;font-size:.95rem;color:#fff}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.proj{overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
+.proj:hover{border-color:var(--blue-line)}
+.thumb{position:relative;margin:10px 10px 0;border-radius:8px;overflow:hidden;aspect-ratio:290/114;max-width:100%;background:linear-gradient(135deg,#0B2A66,#091428)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .big{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:1.4rem;color:var(--blue)}
+.thumb .lbl{position:absolute;left:8px;bottom:8px;background:rgba(5,10,21,.88);border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:.74rem;font-weight:700}
+.proj-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.proj h3{font-size:1.15rem;font-weight:800}
+.proj p.desc{color:var(--muted);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.76rem;font-weight:600;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card-2)}
+.case{color:#C8D2E1;font-size:.88rem;border-top:1px solid var(--line);padding-top:12px}
+.case ul{margin:0;padding-left:18px;display:grid;gap:5px}
+.case b{color:var(--fg)}
+.proj .link{margin-top:auto;padding-top:4px}
+
+/* Journey */
+.hline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative;margin-top:8px}
+.hline::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:linear-gradient(90deg,var(--blue),rgba(150,104,255,.25))}
+.stop{position:relative;padding:34px 18px 0 0;display:grid;gap:4px;align-content:start;min-width:0}
+.stop::before{content:"";position:absolute;left:0;top:0;width:14px;height:14px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue-soft)}
+.stop + .stop{border-left:1px solid var(--line);padding-left:18px}
+.stop + .stop::before{left:-7px}
+.stop .when{color:var(--muted);font-size:.84rem;font-variant-numeric:tabular-nums}
+.stop h3{font-size:1rem;font-weight:800;margin-top:4px}
+.stop .org{color:var(--blue);font-weight:700;font-size:.92rem}
+.stop .org.plain{color:var(--muted);font-weight:500}
+.stop ul{margin:6px 0 0;padding-left:16px;color:var(--muted);font-size:.84rem;display:grid;gap:3px}
+.history{margin-top:26px}
+.history[hidden]{display:none}
+.hrow{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.hrow:last-child{border-bottom:0}
+.hrow .when{color:var(--muted);font-size:.88rem}
+.hrow b{font-weight:800}
+.hrow span{color:var(--blue);font-weight:600}
+.hrow p{color:var(--muted);font-size:.9rem;margin-top:4px}
+.hrow{padding:22px 24px}
+.hrow p{color:#C8C1E2;font-size:.95rem;margin-top:6px;max-width:72ch}
+.hrow ul{margin:10px 0 0;padding-left:18px;display:grid;gap:6px;color:var(--muted);font-size:.92rem;max-width:76ch}
+.hrow li::marker{color:var(--blue)}
+.htags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.htags .chip{color:#D2CBEA;font-size:.72rem}
+.hrow .htags span{color:#D2CBEA;font-weight:600}
+.journey-foot{margin-top:22px}
+
+/* Closing cards */
+.closers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.closer{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;padding:22px;align-items:start}
+.closer .ic{width:52px;height:52px;border-radius:50%;background:var(--blue-soft);display:grid;place-items:center;color:var(--blue)}
+.closer .ic svg{width:24px;height:24px}
+.closer h3{font-size:1.1rem;font-weight:800}
+.closer p{color:var(--muted);font-size:.88rem;margin:6px 0 10px}
+.panel{margin-top:20px;padding:28px}
+.panel[hidden]{display:none}
+.panel h3{font-size:1.4rem;font-weight:800}
+.reader-list{display:grid;gap:10px;margin-top:14px}
+.reader-list button{background:none;border:0;padding:0;color:var(--fg);font:700 1.02rem var(--f);text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:5px}
+.reader-list button:hover{text-decoration-color:var(--blue)}
+.article{margin-top:22px;display:grid;gap:10px;border-top:1px solid var(--line);padding-top:20px;max-width:70ch}
+.article[hidden]{display:none}
+.article h4{font-size:1.25rem;font-weight:800}
+.article h5{font-size:1rem;margin:8px 0 0}
+.article p{color:#C8D2E1}
+.article code{background:var(--bg-2);padding:1px 6px;border-radius:4px;font-size:.9em}
+.contact-panel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 24px;align-items:center}
+.contact-panel .ways{display:grid;gap:10px;font-size:.98rem}
+.contact-panel .ways b{color:var(--blue)}
+.contact-panel .ways span.v{user-select:all;overflow-wrap:anywhere}
+.copied{color:var(--blue);font-size:.86rem;min-height:1em}
+.learn{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
+/* Footer */
+footer{border-top:1px solid var(--line);margin-top:44px;background:rgba(7,3,28,.7)}
+footer .in{display:flex;align-items:center;justify-content:space-between;gap:18px 28px;flex-wrap:wrap;padding-block:20px}
+footer nav{display:flex;gap:24px;flex-wrap:wrap;font-size:.88rem}
+footer nav a{text-decoration:none;color:#D9E0EB}
+footer nav a:hover{color:var(--blue)}
+.fsoc{display:flex;gap:10px}
+.fsoc .sq{border-radius:50%;width:40px;height:40px}
+.legal{border-top:1px solid var(--line);color:var(--dim);font-size:.82rem}
+.legal .in{padding-block:14px 22px}
+.bug{cursor:help;border-radius:3px}
+.bug:hover{background:var(--blue-soft)}
+.bug.found{cursor:default;outline:2px solid var(--blue);outline-offset:3px;border-radius:50%;background:none;color:var(--fg)}
+.hunt.won{color:var(--blue);font-weight:700}
+
+@media (max-width:1040px){
+  .links{display:none}
+  .tools{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .about-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+  .statgrid{grid-column:1 / -1;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .hline{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:26px}
+  .hline::before{display:none}
+  .stop:nth-child(3n+1){border-left:0;padding-left:0}
+  .stop:nth-child(3n+1)::before{left:0}
+  .closers{grid-template-columns:1fr}
+  .sec-top{grid-template-columns:1fr auto}
+  .sec-top > p{grid-column:1 / -1;grid-row:2;justify-self:start}
+}
+@media (max-width:780px){
+  .hero .in{grid-template-columns:1fr}
+  .hero-copy{padding-bottom:4px}
+  .pic img{max-width:380px}
+  .about-grid{grid-template-columns:1fr}
+  .about-img{max-width:480px}
+  .statgrid{grid-template-columns:1fr 1fr}
+  .projects{grid-template-columns:1fr}
+  .hline{grid-template-columns:1fr 1fr}
+  .stop:nth-child(n){border-left:0;padding-left:22px}
+  .stop:nth-child(n)::before{left:0}
+  .stop{padding-top:0}
+  .stop::before{top:5px}
+  .hrow{grid-template-columns:1fr;gap:4px}
+  .contact-panel{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .tools{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hline{grid-template-columns:1fr}
+  .hand{font-size:1.35rem;top:24px}
+  .float{bottom:26px;padding:10px 12px;font-size:.8rem;max-width:150px}
+  .cv span{display:none}
+  .brand span:last-child{display:none}
+  .sec-top{grid-template-columns:1fr}
+  .sec-top .btn{justify-self:start}
+}
+
+/* ---------- Dialogs ---------- */
+.dlg{width:min(620px,calc(100vw - 32px));max-height:min(86vh,820px);padding:30px 28px 28px;border:1px solid var(--blue-line);border-radius:16px;background:linear-gradient(170deg,#1C1046,#0A0520 55%);color:var(--fg);box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 0 1px rgba(150,104,255,.08);overflow:auto;overscroll-behavior:contain}
+.dlg.wide{width:min(820px,calc(100vw - 32px))}
+.dlg::backdrop{background:rgba(2,6,14,.72);backdrop-filter:blur(6px)}
+.dlg h3{font-size:1.5rem;font-weight:800;margin:8px 0 14px;padding-right:40px}
+.dlg .kicker{font-size:.72rem}
+.dlg .more,.dlg .dsub{color:#C8D2E1}
+.dlg .dsub{margin-bottom:18px}
+.dlg .history{border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.dlg .chips{margin-bottom:16px}
+.dlg #case-body ul{margin:0;padding-left:20px;display:grid;gap:10px;color:#C8D2E1}
+.dlg #case-body b{color:var(--fg)}
+.dlg .contact-panel{margin-top:4px}
+.x{position:sticky;float:right;top:-14px;margin:-14px -10px 0 0;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:1.4rem;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:2;transition:border-color .2s,color .2s,transform .2s}
+.x:hover{border-color:var(--blue);color:var(--blue);transform:rotate(90deg)}
+.dlg .reader-list{margin-top:0}
+.dlg .article{margin-top:20px}
+body:has(dialog[open]){overflow:hidden}
+
+/* ---------- Motion ---------- */
+.marquee{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:36px;width:max-content;flex-wrap:nowrap}
+.strip .in{flex-wrap:nowrap}
+.tool,.proj,.st,.closer{transition:border-color .25s,transform .25s,box-shadow .25s}
+.proj:hover,.closer:hover,.st:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(150,104,255,.55)}
+.tool:hover{box-shadow:0 14px 30px -18px rgba(150,104,255,.6)}
+.proj .thumb img{transition:transform .5s ease}
+.proj:hover .thumb img{transform:scale(1.05)}
+.btn.solid{position:relative;overflow:hidden}
+.btn.solid::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%)}
+.btn.solid:hover::after{transition:transform .7s ease;transform:translateX(120%)}
+.btn svg,.link svg{transition:transform .2s}
+.btn:hover svg,.link:hover svg{transform:translateX(3px)}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > :nth-child(2){animation-delay:.08s}
+  .hero-copy > :nth-child(3){animation-delay:.16s}
+  .hero-copy > :nth-child(4){animation-delay:.24s}
+  .hero-copy > :nth-child(5){animation-delay:.32s}
+  .pic img{animation:slide .9s .1s cubic-bezier(.2,.7,.2,1) both}
+  .hand{animation:write 1.4s .7s steps(28) both}
+  .float{animation:pop .6s .9s cubic-bezier(.2,1.4,.4,1) both,bob 5s 1.6s ease-in-out infinite}
+  .hero::before{animation:drift 18s linear infinite}
+  .track{animation:marquee 32s linear infinite}
+  .strip:hover .track{animation-play-state:paused}
+  .dlg[open]{animation:dlgin .32s cubic-bezier(.2,.9,.3,1.1)}
+  .dlg[open]::backdrop{animation:fade .3s ease}
+  .stop::before{animation:pulse 2.6s ease-in-out infinite}
+  .stop:nth-child(2)::before{animation-delay:.3s}.stop:nth-child(3)::before{animation-delay:.6s}.stop:nth-child(4)::before{animation-delay:.9s}.stop:nth-child(5)::before{animation-delay:1.2s}
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes slide{from{opacity:0;transform:translateX(30px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes write{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes pop{from{opacity:0;transform:scale(.8) translateY(10px)}to{opacity:1;transform:none}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes drift{from{background-position:0 0,0 0}to{background-position:44px 44px,44px 44px}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes reveal{from{opacity:.15;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 5px var(--blue-soft)}50%{box-shadow:0 0 0 10px rgba(150,104,255,.04)}}
+@keyframes dlgin{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (max-width:520px){.dlg{padding:24px 18px}.dlg h3{font-size:1.3rem}}
+
+/* ---------- Space theme ---------- */
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block}
+main,footer{position:relative;z-index:1}
+.hero{overflow:visible}
+.hero::before{display:none}
+.portal{position:absolute;left:50%;top:-230px;width:min(820px,130vw);aspect-ratio:2/1.05;transform:translateX(-50%);pointer-events:none;z-index:0}
+.portal span{position:absolute;border-radius:50%}
+.portal .halo{inset:-25% -10%;background:radial-gradient(closest-side,rgba(124,58,237,.55),rgba(99,102,241,.18) 55%,transparent 75%);filter:blur(18px)}
+.portal .ring{inset:0;background:radial-gradient(closest-side,transparent 50%,rgba(255,255,255,.95) 56%,#D8C4FF 60%,#8B5CF6 67%,rgba(99,102,241,.35) 74%,transparent 80%)}
+.portal .swirl{inset:-4%;background:conic-gradient(from 0deg,transparent,rgba(196,170,255,.55),transparent 30%,rgba(34,211,238,.35),transparent 60%,rgba(139,92,246,.6),transparent);-webkit-mask:radial-gradient(closest-side,transparent 52%,#000 60%,#000 72%,transparent 82%);mask:radial-gradient(closest-side,transparent 52%,#000 60%,#000 72%,transparent 82%);filter:blur(3px);mix-blend-mode:screen}
+.nav::after{content:"";position:absolute;left:5%;right:5%;bottom:-1px;height:2px;background:linear-gradient(90deg,transparent,rgba(139,92,246,.9),rgba(255,255,255,.9),rgba(139,92,246,.9),transparent);filter:blur(1px);pointer-events:none}
+.hero .in{position:relative;z-index:1;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;min-height:620px;padding-top:150px;padding-bottom:40px}
+.hero-copy{padding-block:0}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--blue-line);border-radius:999px;background:rgba(17,10,44,.6);font-size:.88rem;color:#D9D2F5;box-shadow:inset 0 0 18px rgba(124,58,237,.25)}
+.badge svg{width:18px;height:18px;color:#B794FF}
+.hero h1{font-size:clamp(2.7rem,6.2vw,4.4rem);margin-top:26px}
+.grad{background:linear-gradient(90deg,#A855F7,#6366F1 45%,#22D3EE);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{color:#BDB6D8}
+.sq{background:rgba(17,10,44,.6)}
+.orbit{position:relative;container-type:inline-size;width:min(100%,540px);aspect-ratio:1;justify-self:center;color:rgba(160,124,255,.18)}
+.orbit .grid{position:absolute;inset:0;width:100%;height:100%;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent);mask-image:radial-gradient(closest-side,#000 70%,transparent)}
+.me{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;border:2px solid rgba(196,170,255,.6);box-shadow:0 0 0 8px rgba(124,58,237,.12),0 0 60px rgba(139,92,246,.65)}
+.me img{width:100%;height:100%;object-fit:cover;object-position:50% 14%;display:block}
+.ring{position:absolute;inset:0;pointer-events:none}
+.ring .tile{pointer-events:auto}
+.me{z-index:2}
+.tile{--r:31cqw;position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(160deg,rgba(60,48,110,.75),rgba(18,12,44,.85));border:1px solid rgba(196,170,255,.25);color:#F1ECFF;font-weight:800;font-size:1.25rem;letter-spacing:-.02em;box-shadow:0 10px 30px -12px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.12);transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)))}
+.r2 .tile{--r:41cqw;width:56px;height:56px;margin:-28px 0 0 -28px;font-size:1.1rem;opacity:.9}
+.strip .lab{background:rgba(17,10,44,.7)}
+
+@media (prefers-reduced-motion:no-preference){
+  .portal .swirl{animation:spin 14s linear infinite}
+  .portal .halo{animation:breathe 6s ease-in-out infinite}
+  .ring.r1{animation:spin 40s linear infinite}
+  .ring.r2{animation:spin 70s linear infinite reverse}
+  .ring.r1 .tile{animation:counter 40s linear infinite}
+  .ring.r2 .tile{animation:counter 70s linear infinite reverse}
+  .orbit{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) both}
+  .me{animation:glow 4s ease-in-out infinite}
+  .grad{background-size:200% 100%;animation:shine 6s ease-in-out infinite alternate}
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes counter{from{transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)))}to{transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a) - 360deg))}}
+@keyframes breathe{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 8px rgba(124,58,237,.12),0 0 50px rgba(139,92,246,.55)}50%{box-shadow:0 0 0 12px rgba(124,58,237,.08),0 0 80px rgba(139,92,246,.85)}}
+@keyframes shine{from{background-position:0 0}to{background-position:100% 0}}
+@media (max-width:1040px){.hero .in{padding-top:120px}}
+@media (max-width:780px){
+  .hero .in{grid-template-columns:1fr;min-height:0;padding-top:110px;gap:44px}
+  .orbit{width:min(100%,380px)}
+  .tile{width:50px;height:50px;margin:-25px 0 0 -25px;font-size:1rem;border-radius:12px}
+  .r2 .tile{width:44px;height:44px;margin:-22px 0 0 -22px;font-size:.9rem}
+  .portal{top:-150px}
+}
+
+/* no photos: glowing core + two-column about */
+.me.core{display:grid;place-content:center;text-align:center;gap:2px;background:radial-gradient(circle at 35% 30%,#B794FF,#6D28D9 45%,#1E0B4B 80%)}
+.me.core span{font-weight:800;font-size:clamp(1.8rem,4.5vw,2.6rem);letter-spacing:-.03em;line-height:1;color:#fff;text-shadow:0 0 18px rgba(255,255,255,.6)}
+.me.core small{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#E4DAFF;opacity:.85}
+.about-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px}
+.about-grid .statgrid{grid-column:auto;grid-template-columns:1fr 1fr}
+@media (max-width:780px){.about-grid{grid-template-columns:1fr}}
+
+/* ---------- Pages ---------- */
+.view[hidden]{display:none!important}
+.page-head{position:relative;text-align:center;padding-top:150px;padding-bottom:18px}
+.page-head .in{position:relative;z-index:1;display:grid;justify-items:center}
+.page-head h1{font-size:clamp(2.4rem,5.6vw,3.8rem);font-weight:800;letter-spacing:-.02em;margin-top:22px}
+.page-head .lede{color:#BDB6D8;margin-top:16px;max-width:56ch;font-size:1.05rem}
+.portal.small{top:-260px;width:min(680px,120vw)}
+.page-head + section{padding-top:28px}
+.view > section:last-child{padding-bottom:20px}
+.focus{margin-top:28px;padding:26px}
+.focus h3{font-size:1.25rem;font-weight:800}
+.focus p{color:var(--muted);margin-top:6px}
+.sub-h{font-size:1.4rem;font-weight:800;margin:44px 0 16px}
+.history.full{margin-top:0}
+.post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.post-card{display:grid;gap:10px;align-content:start;padding:22px;text-align:left;color:inherit;font:inherit;cursor:pointer;transition:border-color .25s,transform .25s,box-shadow .25s}
+.post-card:hover,.post-card.on{border-color:var(--blue-line);transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(150,104,255,.6)}
+.post-card h3{font-size:1.15rem;font-weight:800}
+.post-card p{color:var(--muted);font-size:.92rem}
+.post-card .link{margin-top:4px}
+.reader{margin-top:22px;padding:30px}
+.reader:not(:has(.article:not([hidden]))){display:none}
+.reader .article{margin-top:0;border-top:0;padding-top:0}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.contact .lead{color:#C8C1E2;font-size:1.05rem;max-width:44ch}
+.ways{display:grid;gap:16px;margin-top:26px}
+.way{display:flex;gap:14px;align-items:center;min-width:0}
+.way .sq{flex:none;color:var(--blue)}
+.way div{display:grid;min-width:0}
+.way b{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.way .v,.way a{overflow-wrap:anywhere;font-weight:600}
+.way a{text-decoration:none}
+.way a:hover{color:var(--blue)}
+.form{padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form h3{grid-column:1 / -1;font-size:1.3rem;font-weight:800}
+.form label{display:grid;gap:6px;font-size:.85rem;font-weight:600;color:#D2CBEA}
+.form label.full{grid-column:1 / -1}
+.form input,.form textarea{font:inherit;font-size:.95rem;color:var(--fg);background:rgba(3,0,20,.6);border:1px solid var(--line);border-radius:9px;padding:12px 14px;width:100%;box-sizing:border-box;min-width:0}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.form textarea{min-height:140px;resize:vertical}
+.form .btn{justify-self:start}
+.err{grid-column:1 / -1;color:#FF9AA8;font-size:.86rem;min-height:1em}
+.out{grid-column:1 / -1;border:1px dashed var(--blue-line);border-radius:10px;padding:16px;display:grid;gap:10px;font-size:.9rem}
+.out[hidden]{display:none}
+.out pre{margin:0;white-space:pre-wrap;font:inherit;color:#D2CBEA;background:rgba(3,0,20,.6);border-radius:8px;padding:12px;max-height:200px;overflow:auto}
+.row2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--blue);font-size:.86rem}
+@media (prefers-reduced-motion:no-preference){
+  .view:not([hidden]){animation:pagein .5s cubic-bezier(.2,.7,.2,1)}
+  .page-head .in > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .page-head .in > :nth-child(2){animation-delay:.08s}.page-head .in > :nth-child(3){animation-delay:.16s}
+}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+@media (max-width:1040px){.post-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:780px){.contact,.post-grid{grid-template-columns:1fr}.page-head{padding-top:110px}.portal.small{top:-190px}}
+@media (max-width:520px){.form{grid-template-columns:1fr;padding:20px}}
+
+/* ---------- Motion everywhere ---------- */
+#progress{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:3px;z-index:40;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#A855F7,#6366F1,#22D3EE);box-shadow:0 0 12px rgba(168,85,247,.8);pointer-events:none}
+.card{background-image:radial-gradient(420px circle at var(--mx,-999px) var(--my,-999px),rgba(170,130,255,.13),transparent 42%)}
+.proj,.post-card,.closer{transform-style:preserve-3d;will-change:transform}
+.tilt{transition:transform .12s ease-out!important}
+.form input,.form textarea{transition:border-color .2s,box-shadow .3s,background .3s}
+.form input:focus,.form textarea:focus{background:rgba(20,10,52,.75)}
+.way .sq{transition:transform .25s,box-shadow .25s,border-color .25s}
+.way:hover .sq{transform:translateY(-3px) rotate(-6deg);border-color:var(--blue);box-shadow:0 10px 24px -12px rgba(150,104,255,.9)}
+.hrow{transition:background .25s}
+.hrow:hover{background:rgba(124,58,237,.07)}
+.chip{transition:border-color .2s,transform .2s,color .2s}
+.chip:hover{border-color:var(--blue-line);transform:translateY(-2px);color:#fff}
+.links a{transition:color .2s,text-shadow .2s}
+@media (prefers-reduced-motion:no-preference){
+  .kicker.bar::before{animation:barpulse 3s ease-in-out infinite}
+  .badge svg{animation:twinkle 2.4s ease-in-out infinite}
+  .closer .ic svg,.stat .ic svg{animation:float 4s ease-in-out infinite}
+  .tool .mono{transition:transform .35s cubic-bezier(.2,1.6,.4,1)}
+  .tool:hover .mono{transform:rotate(-8deg) scale(1.12)}
+  .out:not([hidden]),.article:not([hidden]){animation:rise .5s cubic-bezier(.2,.7,.2,1)}
+}
+@keyframes barpulse{0%,100%{width:26px;opacity:1}50%{width:40px;opacity:.7}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(1.25) rotate(15deg);opacity:.75}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* ---------- Hero proof, icons, case study proof ---------- */
+.proof{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.proof li{border:1px solid var(--blue-line);background:rgba(17,10,44,.6);border-radius:999px;padding:6px 14px;font-size:.88rem;color:#D9D2F5}
+.proof b{color:#fff;margin-right:4px;background:linear-gradient(90deg,#C4A8FF,#22D3EE);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo{width:44px;height:44px;display:block;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
+.tile svg{width:64%;height:64%;display:block}
+.tool .logo{transition:transform .35s cubic-bezier(.2,1.6,.4,1)}
+.tool:hover .logo{transform:rotate(-8deg) scale(1.12)}
+.mini-report{display:grid!important;align-content:center;gap:10px;padding:14px 16px;background:linear-gradient(160deg,#0E1A2E,#0A0F1F)!important;font-size:.72rem;color:#C9D4E5}
+.mr-top{display:flex;justify-content:space-between;gap:8px}
+.mr-top b{color:#4ADE80}
+.mr-bars{display:flex;gap:4px;height:10px}
+.mr-bars i{flex:0 0 var(--w);background:#22C55E;border-radius:3px;opacity:.85}
+.mr-foot{color:#8FA0BA}
+.mini-report .lbl{position:static;justify-self:start}
+.proj-links{margin-top:auto;padding-top:4px;display:flex;gap:18px;flex-wrap:wrap}
+.report-real{margin-top:18px;border:1px solid rgba(74,222,128,.3);border-radius:10px;background:rgba(6,20,14,.55);overflow:hidden}
+.rr-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid rgba(74,222,128,.2);font-size:.82rem;color:#A9C9B6}
+.rr-sum b{color:#4ADE80}
+.report-real ul{list-style:none;margin:0;padding:6px 0!important;display:grid;gap:0!important}
+.report-real li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;padding:6px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.76rem;color:#D6E6DC;overflow-wrap:anywhere}
+.report-real em{font-style:normal;color:#8FB7A0}
+.ok{font-family:var(--f);font-size:.66rem;font-weight:800;letter-spacing:.06em;color:#0B2716;background:#4ADE80;border-radius:4px;padding:2px 6px}
+.gh-btn{margin-top:16px}
+.gh-banner{margin-top:22px;padding:24px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center}
+.gh-banner svg.big{width:44px;height:44px;color:#fff}
+.gh-banner h3{font-size:1.15rem;font-weight:800}
+.gh-banner p{color:var(--muted);font-size:.92rem;margin-top:2px}
+
+/* ---------- Break-the-login demo ---------- */
+.demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:18px;align-items:start}
+.demo-form{padding:0 24px 22px;display:grid;gap:14px;overflow:hidden}
+.df-top{margin:0 -24px;padding:10px 16px;display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);background:rgba(3,0,20,.5);font-size:.76rem;color:var(--dim)}
+.dots{display:flex;gap:5px}.dots i{width:9px;height:9px;border-radius:50%;background:#3A2F63}.dots i:first-child{background:#F87171}.dots i:nth-child(2){background:#FBBF24}.dots i:nth-child(3){background:#4ADE80}
+.demo-form h3{font-size:1.3rem;font-weight:800}
+.demo-form label{display:grid;gap:6px;font-size:.85rem;font-weight:600;color:#D2CBEA}
+.demo-form input{font:inherit;font-size:.95rem;color:var(--fg);background:rgba(3,0,20,.6);border:1px solid var(--line);border-radius:9px;padding:12px 14px;width:100%;box-sizing:border-box;min-width:0;transition:border-color .2s,box-shadow .3s}
+.demo-form input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.demo-form .btn{justify-self:stretch;justify-content:center}
+.d-msg{font-size:.88rem;color:var(--muted);border-radius:9px;padding:10px 12px;background:rgba(3,0,20,.45);border:1px solid var(--line);overflow-wrap:anywhere}
+.d-msg b{color:#E9E2FF}
+.d-msg.bad{border-color:rgba(248,113,113,.5);color:#FFC9C9;background:rgba(60,8,20,.4)}
+.d-msg.good{border-color:rgba(74,222,128,.5);color:#C9F5D8;background:rgba(6,40,22,.45)}
+.d-reset{justify-self:start;font-size:.82rem}
+.cases{padding:22px}
+.cases-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.cases-top h3{font-size:1.15rem;font-weight:800}
+.cases-top b{font-size:1.1rem;color:#fff;font-variant-numeric:tabular-nums}
+.meter{height:8px;border-radius:99px;background:rgba(124,82,255,.15);overflow:hidden;margin:12px 0 14px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#A855F7,#6366F1,#22D3EE);border-radius:99px;transition:width .6s cubic-bezier(.2,.7,.2,1)}
+#d-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#d-list li{display:flex;gap:10px;align-items:center;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:rgba(3,0,20,.35);min-width:0;transition:border-color .3s,background .3s}
+#d-list li div{display:grid;min-width:0}
+#d-list small{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700}
+#d-list .nm{font-size:.84rem;color:var(--dim);font-weight:600}
+#d-list .st{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px dashed rgba(160,124,255,.45)}
+#d-list li.hit{border-color:rgba(74,222,128,.45);background:rgba(6,40,22,.35)}
+#d-list li.hit .nm{color:#E8FFF0}
+#d-list li.hit .st{border:0;background:#22C55E url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 12.5 4 4 8-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat}
+#d-list li.flash{animation:hit .7s ease}
+.cases-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.d-win{color:#4ADE80;font-weight:700;font-size:.9rem}
+.d-win a{color:#fff}
+@keyframes hit{0%{transform:scale(1)}40%{transform:scale(1.05);box-shadow:0 0 0 6px rgba(74,222,128,.15)}100%{transform:scale(1)}}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(3px)}30%,50%,70%{transform:translateX(-6px)}40%,60%{transform:translateX(6px)}}
+.shake{animation:shake .45s}
+@media (max-width:900px){.demo{grid-template-columns:1fr}}
+@media (max-width:520px){#d-list{grid-template-columns:1fr}.gh-banner{grid-template-columns:1fr}.gh-banner .btn{justify-self:start}}
+@media (max-width:780px){.nav,.strip{backdrop-filter:none}.card{background-image:none}}
+
+/* ---------- Extensions ---------- */
+.sub-p{color:var(--muted);margin:-8px 0 18px}
+.ext-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ext-tag{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#C4A8FF;border:1px solid var(--blue-line);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.popup{display:grid!important;place-items:center;aspect-ratio:290/150!important;background:radial-gradient(circle at 30% 20%,rgba(124,58,237,.35),transparent 60%),linear-gradient(160deg,#120A30,#07041A)!important}
+.pp{width:62%;min-width:170px;border-radius:9px;overflow:hidden;border:1px solid rgba(160,124,255,.35);background:#0B1230;box-shadow:0 18px 40px -16px rgba(0,0,0,.9);font-size:.62rem;color:#C9D4E5}
+.pp-head{display:flex;align-items:center;gap:6px;padding:6px 8px;background:#0A1A3F;font-weight:800;color:#fff;font-size:.68rem}
+.pp-logo{width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,#22D3EE,#8B5CF6)}
+.pp-body{padding:8px;display:grid;gap:6px}
+.pp-row{display:flex;gap:6px;align-items:center;background:rgba(255,255,255,.05);border-radius:4px;padding:3px 6px}
+.pp-row i{font-style:normal;color:#4ADE80;font-weight:800}
+.pp-opts{display:flex;gap:4px}.pp-opts span{border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:1px 5px}.pp-opts .on{border-color:#22D3EE;color:#22D3EE}
+.pp-btns{display:flex;gap:5px}.pp-btns b{flex:1;text-align:center;border-radius:4px;padding:3px 0;color:#04121A;font-weight:800}.pp-btns .cy{background:#22D3EE}.pp-btns .pu{background:#8B5CF6;color:#fff}
+.pp-spark,.pp-bars{display:flex;align-items:flex-end;gap:3px;height:26px}
+.pp-spark i{flex:1;height:var(--h);background:linear-gradient(#22D3EE,#0E7490);border-radius:2px}
+.pp-bars{height:34px}.pp-bars i{flex:1;height:var(--h);background:linear-gradient(#A78BFA,#6D28D9);border-radius:2px 2px 0 0}
+.pp-table{display:grid;gap:3px}.pp-table span{height:5px;border-radius:2px;background:rgba(255,255,255,.12)}.pp-table span:nth-child(2){width:80%}.pp-table span:nth-child(3){width:60%}
+@media (prefers-reduced-motion:no-preference){.ext:hover .pp{transform:translateY(-4px) scale(1.03)}.pp{transition:transform .4s cubic-bezier(.2,.7,.2,1)}.pp-spark i,.pp-bars i{animation:barpump 2.4s ease-in-out infinite;transform-origin:bottom}.pp-spark i:nth-child(odd),.pp-bars i:nth-child(odd){animation-delay:.6s}}
+@keyframes barpump{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.7)}}
+@media (max-width:780px){.ext-grid{grid-template-columns:1fr}}
+
+/* ---------- Blog ---------- */
+.blog-tools{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.fchip{font:600 .85rem var(--f);color:#D2CBEA;background:rgba(17,10,44,.6);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.fchip b{font-weight:700;color:var(--dim);margin-left:4px}
+.fchip:hover{border-color:var(--blue-line)}
+.fchip.on{background:linear-gradient(90deg,#7C3AED,#4F46E5);border-color:transparent;color:#fff}
+.fchip.on b{color:#E4DAFF}
+.search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(3,0,20,.55);border-radius:999px;padding:0 14px;min-width:min(100%,260px)}
+.search svg{color:var(--muted);width:18px;height:18px}
+.search input{border:0;background:none;color:var(--fg);font:inherit;font-size:.92rem;padding:10px 0;width:100%;min-width:0;outline:none}
+.search:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.post-card{text-decoration:none}
+.pc-meta{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted)}
+.pc-tag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#C4A8FF;border:1px solid var(--blue-line);border-radius:999px;padding:2px 9px}
+.post-card.featured{display:grid;gap:12px;padding:30px;margin-bottom:16px;background-image:radial-gradient(circle at 85% 20%,rgba(34,211,238,.14),transparent 45%),radial-gradient(circle at 10% 90%,rgba(124,58,237,.25),transparent 50%)}
+.post-card.featured h3{font-size:clamp(1.4rem,3vw,1.9rem);max-width:30ch}
+.post-card.featured p{font-size:1rem;max-width:62ch}
+.feat-flag{justify-self:start;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#04121A;background:linear-gradient(90deg,#C4A8FF,#22D3EE);border-radius:6px;padding:3px 9px}
+.post-card[hidden]{display:none}
+.no-posts{color:var(--muted);text-align:center;padding:30px 0}
+.reading{max-width:820px;margin:0 auto}
+.read-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.share-note{display:block;color:#4ADE80;font-size:.85rem;min-height:1.3em;text-align:right}
+.reader-card{padding:clamp(22px,4vw,40px)}
+.post-meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.85rem}
+.post h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;letter-spacing:-.015em;margin-top:14px;line-height:1.15}
+.post-sum{color:#C8C1E2;font-size:1.1rem;margin-top:12px}
+.post-body{display:grid;gap:14px;margin-top:22px;font-size:1.02rem;line-height:1.75;color:#D9D3F0}
+.post-body h4{font-size:1.2rem;font-weight:800;color:#fff;margin-top:12px}
+.post-body ul{margin:0;padding-left:22px;display:grid;gap:8px}
+.post-body li::marker{color:var(--blue)}
+.post-body a{color:#C4A8FF}
+.post-body code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:rgba(124,58,237,.18);border-radius:5px;padding:1px 6px}
+.post-body pre{position:relative;margin:4px 0;background:#08061A;border:1px solid var(--line);border-radius:12px;padding:40px 16px 16px;overflow-x:auto;line-height:1.6}
+.post-body pre::before{content:attr(data-lang);position:absolute;top:10px;left:16px;font:700 .68rem var(--f);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.post-body pre code{background:none;padding:0;font-size:.84rem;color:#E6E1FA;white-space:pre}
+.copy-code{position:absolute;top:8px;right:8px;font:600 .74rem var(--f);color:#D2CBEA;background:rgba(124,58,237,.2);border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+.copy-code:hover{border-color:var(--blue)}
+.tk-k{color:#C792EA}.tk-s{color:#A5E075}.tk-c{color:#6C6890;font-style:italic}.tk-d{color:#FFCB6B}.tk-n{color:#F78C6C}.tk-y{color:#82AAFF}
+.author{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.av{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,#7C3AED,#22D3EE);color:#fff}
+.author p{color:var(--muted);font-size:.92rem;margin-top:2px}
+.author-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;font-weight:700;font-size:.9rem}
+.author-links a{color:#C4A8FF;text-decoration:none}
+.author-links a:hover{text-decoration:underline}
+.prevnext{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.pn{padding:16px 18px;text-decoration:none;display:grid;gap:4px;transition:border-color .2s}
+.pn:hover{border-color:var(--blue-line)}
+.pn small{color:var(--muted);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.pn b{font-size:.98rem}
+.pn.next{text-align:right}
+.pn[hidden]{visibility:hidden;display:block}
+@media (max-width:620px){.prevnext{grid-template-columns:1fr}.pn.next{text-align:left}.blog-tools{flex-direction:column;align-items:stretch}}
+
+/* ---------- Fun ---------- */
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:61;background:rgba(17,10,44,.95);border:1px solid var(--blue-line);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;font-size:.92rem;box-shadow:0 14px 40px -12px rgba(124,58,237,.8);transition:opacity .3s,transform .3s;pointer-events:none;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.crawler{position:fixed;z-index:55;width:46px;height:46px;padding:0;border:0;background:none;cursor:crosshair;left:0;top:0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.6))}
+.crawler svg{width:100%;height:100%;display:block}
+.crawler .legs{animation:legs .25s steps(2) infinite}
+.crawler.splat{cursor:default;animation:splat .6s ease forwards}
+@keyframes legs{to{transform:scaleY(-1);transform-origin:center}}
+@keyframes splat{0%{transform:var(--t) scale(1)}30%{transform:var(--t) scale(1.4,.5)}100%{transform:var(--t) scale(1.6,.3);opacity:0}}
+.score{color:var(--muted)}
+.score b{color:#4ADE80}
+.me.core{cursor:pointer;border:0;padding:0;font:inherit;color:inherit}
+.me.core:focus-visible{outline:3px solid #22D3EE;outline-offset:6px}
+.orbit.running .ring.r1,.orbit.running .ring.r2,.orbit.running .ring .tile{animation-duration:3s!important}
+.orbit.running .me.core{animation:spinpulse .9s linear infinite}
+.orbit.passed .me.core{background:radial-gradient(circle at 35% 30%,#86EFAC,#16A34A 45%,#052E16 82%);box-shadow:0 0 0 10px rgba(34,197,94,.15),0 0 70px rgba(34,197,94,.7)}
+.orbit.passed .tile{border-color:rgba(74,222,128,.6);box-shadow:0 0 18px rgba(74,222,128,.45)}
+@keyframes spinpulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.35)}}
+
+.bb-wrap{display:grid;justify-items:end;gap:4px}
+.bb-wrap small{color:var(--muted);font-size:.78rem;min-height:1em}
+.bb-hud{position:fixed;top:calc(84px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:58;display:flex;gap:18px;background:rgba(17,10,44,.95);border:1px solid var(--blue-line);border-radius:999px;padding:8px 20px;font-weight:700;color:#fff;box-shadow:0 10px 30px -10px rgba(124,58,237,.8)}
+.bb-hud b{color:#4ADE80;font-variant-numeric:tabular-nums}
+.bb-hud[hidden]{display:none}
+.crawler .legs{transform-box:fill-box}
+@media (max-width:1040px){.bb-wrap{justify-items:start}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="in" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2.5 7v7.5H9V10H6.5zM7.75 6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zM11 10v7.5h2.5v-4c0-1.1.6-1.7 1.5-1.7s1.4.6 1.4 1.7v4h2.5v-4.5c0-2.3-1.2-3.3-2.9-3.3-1.2 0-2 .6-2.5 1.2V10H11z"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6"/></symbol>
+  <symbol id="dl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+  <symbol id="bulb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="cal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4M8 14h2M12 14h2M16 14h2"/></symbol>
+  <symbol id="cube" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 3.5 6.8v10.4L12 22l8.5-4.8V6.8L12 2zm0 2.3 6.2 3.5L12 11.3 5.8 7.8 12 4.3z"/></symbol>
+  <symbol id="users" viewBox="0 0 24 24"><path fill="currentColor" d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c0-3.3 3.1-6 7-6s7 2.7 7 6H2zm15.5 0c0-1.8-.7-3.5-1.9-4.7.4-.2.9-.3 1.4-.3 2.8 0 5 2.2 5 5h-4.5z"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm-1.2 13.6L7.4 12.2l1.4-1.4 2 2 4.4-4.4 1.4 1.4-5.8 5.8z"/></symbol>
+  <symbol id="award" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12zM8.5 14 7 21l5-2.5 5 2.5-1.5-7"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+
+  <symbol id="gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .4 1 .4 2 .1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.8V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="lg-se" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#43B02A"/><text x="7" y="35" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="24" fill="#fff">Se</text><path d="M30 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="lg-py" viewBox="0 0 48 48"><path fill="#3776AB" d="M23.6 4c-8 0-8.6 3.5-8.6 5.8V14h9v2H11.4C7.7 16 5 18.8 5 24.6c0 6 2.4 8.4 6 8.4h3.6v-5.4c0-3.6 3-6.6 6.6-6.6h8.6c3 0 5.2-2.4 5.2-5.3V9.8C35 6.9 32.6 4 23.6 4zm-4.8 3.3a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4z"/><path fill="#FFD43B" d="M24.4 44c8 0 8.6-3.5 8.6-5.8V34h-9v-2h12.6c3.7 0 6.4-2.8 6.4-8.6 0-6-2.4-8.4-6-8.4h-3.6v5.4c0 3.6-3 6.6-6.6 6.6h-8.6c-3 0-5.2 2.4-5.2 5.3v5.9c0 2.9 2.4 5.8 11.4 5.8zm4.8-3.3a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4z"/></symbol>
+  <symbol id="lg-pm" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#FF6C37"/><path d="M13 26.5 35 15l-9.5 21-3.4-7.6z" fill="#fff"/><path d="M22.1 28.4 35 15" stroke="#FF6C37" stroke-width="1.6"/></symbol>
+  <symbol id="lg-jm" viewBox="0 0 48 48"><path fill="#D22128" d="M39 5C27 7 17 16 13.5 30L11 41l3.2-2.4c2-6.6 6-12 11.6-16.2-4.5 5.2-7.6 10.6-8.8 16.2C29 36.4 37.4 25 39 5z"/><path d="M14.5 38.5 26 22" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity=".8"/></symbol>
+  <symbol id="lg-ap" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#662D91"/><path d="M14 30a11 11 0 0 1 14-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M34 18a11 11 0 0 1-14 15" fill="none" stroke="#C9A7F0" stroke-width="4" stroke-linecap="round"/></symbol>
+  <symbol id="lg-pw" viewBox="0 0 48 48"><path fill="#2EAD33" d="M6 14c6-3 13-3 19 0v10c0 7-4 12-9.5 12S6 31 6 24z"/><path fill="#E2574C" d="M22 18c6-3 13-3 20 0v10c0 7-4.5 12-10 12S22 35 22 28z"/><circle cx="12" cy="21" r="2" fill="#0b3d0d"/><circle cx="19" cy="21" r="2" fill="#0b3d0d"/><circle cx="28.5" cy="25" r="2" fill="#5a1410"/><circle cx="35.5" cy="25" r="2" fill="#5a1410"/></symbol>
+  <symbol id="lg-gh" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#F5F3FF"/><g transform="translate(6 6) scale(1.5)"><path fill="#1B1530" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .4 1 .4 2 .1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.8V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></g></symbol>
+  <symbol id="lg-je" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#D33833"/><circle cx="24" cy="21" r="10" fill="#F0D6B7"/><path d="M14 18c1-7 19-9 20 0-4-3-16-3-20 0z" fill="#335061"/><path d="M18 35l6-4 6 4-6 3z" fill="#335061"/><circle cx="20.5" cy="21.5" r="1.2" fill="#1B1530"/><circle cx="27.5" cy="21.5" r="1.2" fill="#1B1530"/></symbol>
+  <symbol id="lg-lr" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#0F62AE"/><path d="M11 31a13 13 0 1 1 26 0" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M24 31l8-10" stroke="#7FD3FF" stroke-width="3.5" stroke-linecap="round"/><circle cx="24" cy="31" r="3" fill="#fff"/></symbol>
+  <symbol id="lg-wd" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#EA5906"/><path d="M10 16l4.5 16L19 20l4.5 12L28 16" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M32 16h3a8 8 0 0 1 0 16h-3z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/></symbol>
+  <symbol id="lg-pt" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#14213D"/><g fill="#009FE3"><rect x="9" y="17" width="5" height="22" rx="1"/><rect x="17" y="21" width="5" height="18" rx="1"/><rect x="25" y="14" width="5" height="25" rx="1"/><rect x="33" y="24" width="5" height="15" rx="1"/></g><g fill="#F7B900"><rect x="9" y="11" width="5" height="4" rx="1"/><rect x="17" y="15" width="5" height="4" rx="1"/><rect x="25" y="8" width="5" height="4" rx="1"/><rect x="33" y="18" width="5" height="4" rx="1"/></g></symbol>
+  <symbol id="lg-bs" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#F4801F"/><circle cx="24" cy="24" r="16" fill="#E2312A"/><circle cx="24" cy="24" r="11" fill="#1D7BC1"/><circle cx="24" cy="24" r="6" fill="#0D1F3C"/><circle cx="26" cy="22" r="2" fill="#fff"/></symbol>
+  <symbol id="lg-js" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" fill="#F0DB4F"/><text x="44" y="42" text-anchor="end" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="20" fill="#1A1A1A">JS</text></symbol>
+  <symbol id="lg-ji" viewBox="0 0 48 48"><path fill="#2684FF" d="M24 4 44 24 24 44 4 24z"/><path fill="#fff" d="M24 14 34 24 24 34 14 24z" opacity=".95"/><path fill="#2684FF" d="M24 19 29 24 24 29 19 24z"/></symbol>
+  <symbol id="lg-tc" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#5B4B9A"/><rect x="13" y="10" width="22" height="29" rx="3" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M17 19l2 2 4-4M17 28l2 2 4-4M26 20h5M26 29h5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="lg-ua" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#7C3AED"/><path d="M14 25l7 7 13-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm9 16-4-4"/></symbol>
+  <symbol id="doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></symbol>
+</svg>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="bb-hud" id="bb-hud" hidden aria-live="polite"><span>🐞 <b id="bb-n">0</b> squashed</span><span>⏱ <b id="bb-time">20</b>s</span></div>
+<div id="progress" aria-hidden="true"></div>
+<header class="nav">
+  <div class="in">
+    <a class="brand" href="#home"><span class="logo">H<b>O</b></span><span><strong>Henry Okolie</strong><small>QA Engineer</small></span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#home" class="on">Home</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="cv" href="https://www.linkedin.com/in/henry-okolie-09585b22b" target="_blank" rel="noopener"><span>View CV</span><svg class="i" style="width:16px;height:16px"><use href="#dl"/></svg></a>
+  </div>
+</header>
+
+<main>
+<div class="view" id="v-home">
+  <section class="hero" id="home">
+    <div class="portal" aria-hidden="true"><span class="halo"></span><span class="ring"></span><span class="swirl"></span></div>
+    <div class="in">
+      <div class="hero-copy">
+        <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8zM18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg>QA Engineer Portfolio</p>
+        <h1>Finding the bugs <span class="grad">before your users do</span></h1>
+        <p class="lede">I'm Henry Okolie, a Senior QA Engineer working across web, mobile and API testing. I help fintech and e-commerce teams ship reliable, secure products through smart test strategies and automation.</p>
+        <ul class="proof">
+          <li><b>6+ yrs</b> in fintech &amp; banking QA</li>
+          <li><b>−40%</b> manual testing effort</li>
+          <li><b>200+</b> testers trained</li>
+        </ul>
+        <div class="ctas">
+          <a class="btn solid" href="#projects">View My Work <svg class="i"><use href="#arrow"/></svg></a>
+          <a class="btn line" href="#contact">Contact Me</a>
+        </div>
+        <div class="socials">
+          <a class="sq" href="https://www.linkedin.com/in/henry-okolie-09585b22b" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#in"/></svg></a>
+          <a class="sq" href="https://github.com/henry970" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#gh"/></svg></a>
+          <a class="sq" href="#contact" aria-label="Email"><svg class="i"><use href="#mail"/></svg></a>
+        </div>
+      </div>
+      <div class="orbit" aria-label="The testing tools Henry uses, orbiting a QA core">
+        <svg class="grid" viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="140"/><circle cx="200" cy="200" r="92"/><path d="M200 0v400M0 200h400M58 58l284 284M342 58 58 342"/><path d="M0 120h400M0 280h400M120 0v400M280 0v400" opacity=".5"/></g></svg>
+        <button class="me core" type="button" id="core" aria-label="Run the tests"><span>QA</span><small id="core-sub">click to run tests</small></button>
+        <div class="ring r1">
+          <span class="tile" style="--a:0deg" title="Selenium"><svg aria-hidden="true"><use href="#lg-se"/></svg></span><span class="tile" style="--a:90deg" title="Python"><svg aria-hidden="true"><use href="#lg-py"/></svg></span><span class="tile" style="--a:180deg" title="Postman"><svg aria-hidden="true"><use href="#lg-pm"/></svg></span><span class="tile" style="--a:270deg" title="Appium"><svg aria-hidden="true"><use href="#lg-ap"/></svg></span>
+        </div>
+        <div class="ring r2">
+          <span class="tile" style="--a:30deg" title="JMeter"><svg aria-hidden="true"><use href="#lg-jm"/></svg></span><span class="tile" style="--a:90deg" title="Playwright"><svg aria-hidden="true"><use href="#lg-pw"/></svg></span><span class="tile" style="--a:150deg" title="GitHub Actions"><svg aria-hidden="true"><use href="#lg-gh"/></svg></span><span class="tile" style="--a:210deg" title="Jenkins"><svg aria-hidden="true"><use href="#lg-je"/></svg></span><span class="tile" style="--a:270deg" title="LoadRunner"><svg aria-hidden="true"><use href="#lg-lr"/></svg></span><span class="tile" style="--a:330deg" title="WebdriverIO"><svg aria-hidden="true"><use href="#lg-wd"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about">
+    <div class="in about-grid">
+      <div class="about-txt">
+        <p class="kicker">About me</p>
+        <h2>Quality Engineer.<br>Problem Solver. Lifelong Learner.</h2>
+        <p class="body">I'm a QA Engineer with hands-on experience in manual testing, automation testing, API testing and mobile testing. I enjoy breaking things (in a good way), finding issues early, and helping teams deliver reliable, high-quality products.</p>
+        <dialog class="dlg" id="more-about" aria-labelledby="ma-t"><button class="x" type="button" aria-label="Close" data-close>&times;</button><p class="kicker">About me</p><h3 id="ma-t">More about me</h3><p class="more">I've tested payments, banking and e-commerce products at Prune Payments, Access Bank, Leatherback and FirstBank. My Selenium and Jenkins automation at Testify cut manual testing by 40% and improved deployment efficiency by 30%. I studied Mechanical Engineering at Yaba College of Technology, and I train new testers through ConfixHub.</p></dialog>
+        <button class="btn blue" type="button" id="about-btn" data-open="more-about">More About Me <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></button>
+      </div>
+      <div class="statgrid">
+        <div class="card st rv"><svg><use href="#cal"/></svg><div><b data-count="6" data-suffix="+">6+</b><span>Years of Experience</span></div></div>
+        <div class="card st rv"><svg><use href="#users"/></svg><div><b data-count="200" data-suffix="+">200+</b><span>Students Trained (ConfixHub)</span></div></div>
+        <div class="card st rv"><svg><use href="#cube"/></svg><div><b data-count="10" data-suffix="+">10+</b><span>Projects Tested</span></div></div>
+        <div class="card st rv"><svg><use href="#shield"/></svg><div><b data-count="40" data-prefix="−" data-suffix="%">−40%</b><span>Manual Testing Effort</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="in">
+      <div class="sec-top rv">
+        <div><p class="kicker bar">Try it</p><h2 class="h2">Can you break this login form?</h2></div>
+        <p>There are 10 test cases hidden in this little form. Try the inputs a tester would try and watch them tick off.</p>
+        <div class="bb-wrap"><button class="btn blue" type="button" id="bugbash">🐞 Start a bug bash</button><small id="bb-best"></small></div>
+      </div>
+      <div class="demo">
+        <form class="card demo-form rv" id="demo-form" novalidate autocomplete="off">
+          <div class="df-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>bank-app.demo / login</span></div>
+          <h3>Sign in</h3>
+          <label>Email<input id="d-email" type="text" spellcheck="false" placeholder="you@example.com"></label>
+          <label>Password<input id="d-pass" type="password" placeholder="••••••••"></label>
+          <button class="btn solid" type="submit" id="d-go">Sign in</button>
+          <p class="d-msg" id="d-msg" aria-live="polite">Hint: the demo account is <b>qa@henry.dev</b> with password <b>Test@1234</b>.</p>
+          <button class="link d-reset" type="button" id="d-reset">Reset the form</button>
+        </form>
+        <div class="card cases rv">
+          <div class="cases-top"><h3>Test cases found</h3><b id="d-count">0 / 10</b></div>
+          <div class="meter"><i id="d-bar"></i></div>
+          <ul id="d-list"><li data-case="empty"><span class="st" aria-hidden="true"></span><div><small>Validation</small><span class="nm" data-name="Submit with empty fields">Not found yet</span></div></li><li data-case="format"><span class="st" aria-hidden="true"></span><div><small>Validation</small><span class="nm" data-name="Invalid email format">Not found yet</span></div></li><li data-case="short"><span class="st" aria-hidden="true"></span><div><small>Validation</small><span class="nm" data-name="Password under 8 characters">Not found yet</span></div></li><li data-case="trim"><span class="st" aria-hidden="true"></span><div><small>Input handling</small><span class="nm" data-name="Spaces before or after the email">Not found yet</span></div></li><li data-case="case"><span class="st" aria-hidden="true"></span><div><small>Input handling</small><span class="nm" data-name="Email in different letter case">Not found yet</span></div></li><li data-case="long"><span class="st" aria-hidden="true"></span><div><small>Boundary</small><span class="nm" data-name="Input over 100 characters">Not found yet</span></div></li><li data-case="sqli"><span class="st" aria-hidden="true"></span><div><small>Security</small><span class="nm" data-name="SQL injection attempt">Not found yet</span></div></li><li data-case="xss"><span class="st" aria-hidden="true"></span><div><small>Security</small><span class="nm" data-name="Script injection (XSS)">Not found yet</span></div></li><li data-case="happy"><span class="st" aria-hidden="true"></span><div><small>Auth</small><span class="nm" data-name="Valid login (happy path)">Not found yet</span></div></li><li data-case="lockout"><span class="st" aria-hidden="true"></span><div><small>Auth</small><span class="nm" data-name="Lockout after 3 wrong passwords">Not found yet</span></div></li></ul>
+          <div class="cases-foot"><button class="link" type="button" id="d-reveal">Show me all 10</button><p class="d-win" id="d-win" hidden>All 10 found. You think like a tester. <a href="#contact">Let's talk.</a></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more" style="padding-top:8px">
+    <div class="in">
+      <div class="closers">
+        <div class="card closer rv"><span class="ic"><svg><use href="#award"/></svg></span><div><h3>Skills &amp; Learning</h3><p>Testing tools change fast. These are the areas I keep sharpening.</p><a class="link" href="#skills">See Focus Areas <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></a></div></div>
+        <div class="card closer rv"><span class="ic"><svg><use href="#doc"/></svg></span><div><h3>Latest Blog Posts</h3><p>Testing insights, tutorials and real-world experience.</p><a class="link" href="#blog">Read My Blog <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></a></div></div>
+        <div class="card closer rv"><span class="ic"><svg><use href="#mail"/></svg></span><div><h3>Let's Work Together</h3><p>Open to job opportunities, freelance projects or mentorship initiatives.</p><a class="link" href="#contact">Contact Me <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></a></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="view" id="v-skills" hidden>
+  <header class="page-head">
+    <div class="portal small" aria-hidden="true"><span class="halo"></span><span class="ring"></span><span class="swirl"></span></div>
+    <div class="in">
+      <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8zM18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg>Skills &amp; Tools</p>
+      <h1>The tools I <span class="grad">test with</span></h1>
+      <p class="lede">Frameworks and tools I use every week for web, mobile, API and performance testing.</p>
+    </div>
+  </header>
+  <section id="skills">
+    <div class="in">
+      <div class="sec-top rv">
+        <div><p class="kicker bar">Skills &amp; Tools</p><h2 class="h2">Technologies I Work With</h2></div>
+        <p>I use modern testing tools and technologies to deliver reliable, scalable and high-quality products.</p>
+      </div>
+      <div class="tools" id="tools">
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-se"/></svg>Selenium<br>(Python)</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-pw"/></svg>Playwright</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-ap"/></svg>Appium</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-pm"/></svg>Postman<br>&amp; Newman</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-jm"/></svg>JMeter</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-wd"/></svg>WebdriverIO<br>(Node.js)</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-py"/></svg>Python</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-gh"/></svg>Git &amp;<br>GitHub Actions</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-pt"/></svg>pytest</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-lr"/></svg>LoadRunner</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-je"/></svg>Jenkins</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-bs"/></svg>BrowserStack</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-js"/></svg>JavaScript</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-ji"/></svg>Jira</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-tc"/></svg>Test Design<br>&amp; Planning</div>
+        <div class="card tool rv"><svg class="logo" aria-hidden="true"><use href="#lg-ua"/></svg>UAT &amp;<br>Regression</div>
+      </div>
+      <div class="card focus rv">
+        <h3>Areas I keep sharpening</h3>
+        <p>Testing tools change fast. These are the skills I'm actively building on.</p>
+        <div class="learn"><span class="chip">Selenium automation</span><span class="chip">API testing with Postman &amp; Newman</span><span class="chip">Performance testing with JMeter</span><span class="chip">Test automation in Python</span><span class="chip">Mobile testing with Appium</span><span class="chip">AI-assisted testing</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="view" id="v-projects" hidden>
+  <header class="page-head">
+    <div class="portal small" aria-hidden="true"><span class="halo"></span><span class="ring"></span><span class="swirl"></span></div>
+    <div class="in">
+      <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8zM18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg>Projects</p>
+      <h1>Real projects, <span class="grad">real impact</span></h1>
+      <p class="lede">Products I've tested and automated, from payments to merchant platforms. Open any card for the case study.</p>
+    </div>
+  </header>
+  <section id="projects">
+    <div class="in">
+      <div class="sec-top rv">
+        <div><p class="kicker bar">Featured Projects</p><h2 class="h2">Real Projects. Real Impact.</h2></div>
+        <p>Some of the projects I've worked on, showing my approach to quality assurance, automation and problem solving.</p>
+      </div>
+      <div class="projects" id="projects-grid">
+        <article class="card proj rv">
+          <div class="thumb"><img src="data:image/jpeg;base64,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" alt="" width="464" height="182"><span class="lbl">UI &amp; API Testing</span></div>
+          <div class="proj-body">
+            <h3>Prune Payments</h3>
+            <p class="desc">Automated UI and API testing for a payment application. Improved test coverage and reduced manual effort.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Selenium</span><span class="chip">pytest</span></div>
+            <div class="case" hidden><ul><li><b>Problem:</b> slow manual regression, and payment flows that could break without anyone noticing.</li><li><b>What I did:</b> Selenium and Appium suites for web and mobile, Postman suites for business rules, all running in CI/CD, plus JMeter load tests.</li><li><b>Result:</b> faster releases and API bugs caught in the pipeline, not in production.</li></ul></div>
+            <button class="link" type="button" aria-expanded="false">View Case Study <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></button>
+          </div>
+        </article>
+        <article class="card proj rv">
+          <div class="thumb"><img src="data:image/jpeg;base64,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" alt="" width="448" height="182"><span class="lbl">Web &amp; Mobile Testing</span></div>
+          <div class="proj-body">
+            <h3>StoreToLet</h3>
+            <p class="desc">Web and mobile application testing for a merchant platform. Functional, regression and usability testing.</p>
+            <div class="chips"><span class="chip">Appium</span><span class="chip">Python</span><span class="chip">Manual Testing</span></div>
+            <div class="case" hidden><ul><li><b>Problem:</b> a growing merchant platform needed a quality process from day one.</li><li><b>What I did:</b> set the QA strategy, wrote functional and regression cases, and automated key mobile flows with Appium.</li><li><b>Result:</b> every release checked against a clear, repeatable test plan.</li></ul></div>
+            <button class="link" type="button" aria-expanded="false">View Case Study <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></button>
+          </div>
+        </article>
+        <article class="card proj rv">
+          <div class="thumb mini-report" aria-hidden="true"><div class="mr-top"><span>pytest-html · report.html</span><b>5 passed</b></div><div class="mr-bars"><i style="--w:47%"></i><i style="--w:11%"></i><i style="--w:11%"></i><i style="--w:11%"></i><i style="--w:20%"></i></div><div class="mr-foot">0 failed · 0 skipped · 55s</div><span class="lbl">Web UI Automation</span></div>
+          <div class="proj-body">
+            <h3>OrangeHRM Test Automation</h3>
+            <p class="desc">A Selenium + pytest suite for the OrangeHRM demo app, built with the Page Object Model and run headless in GitHub Actions on every push.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Selenium</span><span class="chip">pytest</span><span class="chip">GitHub Actions</span></div>
+            <div class="case" hidden><ul><li><b>Goal:</b> cover the core modules of a real HR web app with tests that are easy to maintain and run automatically.</li><li><b>What I did:</b> split locators and page actions into separate classes for Login, Admin, PIM, Leave and Time; one pytest fixture starts headless Chrome and logs in once; a GitHub Actions workflow installs dependencies, runs pytest and uploads the HTML report on every push and pull request.</li><li><b>Result:</b> five end-to-end tests across five modules, all passing in 55 seconds in the latest saved report.</li></ul>
+              <div class="report-real"><div class="rr-head"><span>report.html</span><span class="rr-sum"><b>5 passed</b> · 0 failed · 0 skipped · 55s</span></div><ul><li><span class="ok">PASSED</span>test_login_page_on_orange_website<em>26s</em></li><li><span class="ok">PASSED</span>test_admin_page_on_orange_website<em>6s</em></li><li><span class="ok">PASSED</span>test_Pim_page_on_orange_website<em>6s</em></li><li><span class="ok">PASSED</span>test_leave_page_on_orange_website<em>6s</em></li><li><span class="ok">PASSED</span>test_time_page_on_orange_website<em>11s</em></li></ul></div>
+              <a class="btn blue gh-btn" href="https://github.com/henry970/Orange_Automation" target="_blank" rel="noopener"><svg class="i" style="width:16px;height:16px"><use href="#gh"/></svg>View the code on GitHub</a>
+            </div>
+            <div class="proj-links"><button class="link" type="button" aria-expanded="false">View Case Study <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></button><a class="link" href="https://github.com/henry970/Orange_Automation" target="_blank" rel="noopener"><svg class="i" style="width:16px;height:16px"><use href="#gh"/></svg>Code</a></div>
+          </div>
+        </article>
+        <article class="card proj rv">
+          <div class="thumb"><span class="big">TestPilot AI</span><span class="lbl">In development</span></div>
+          <div class="proj-body"><h3>TestPilot AI</h3><p class="desc">An AI assistant that drafts test cases, bug reports and test plans for QA engineers.</p><div class="chips"><span class="chip">React</span><span class="chip">FastAPI</span><span class="chip">OpenAI API</span></div></div>
+        </article>
+        <article class="card proj rv">
+          <div class="thumb"><span class="big">FirstBank</span><span class="lbl">Banking QA</span></div>
+          <div class="proj-body"><h3>EMEMO &amp; Token Dispatch Tracker</h3><p class="desc">Led testing for two FirstBank tools built on PowerApps: UI, data validation and UAT.</p><div class="chips"><span class="chip">Manual Testing</span><span class="chip">UAT</span><span class="chip">PowerApps</span></div></div>
+        </article>
+      </div>
+      <h3 class="sub-h rv" id="extensions">Chrome extensions I've built</h3>
+      <p class="sub-p rv">Tools I built to make testing and analysis faster, right inside the browser.</p>
+      <div class="projects ext-grid">
+        <article class="card proj rv ext">
+          <div class="thumb popup" aria-hidden="true"><div class="pp"><div class="pp-head"><span class="pp-logo"></span>PerfPilot</div><div class="pp-body"><div class="pp-row"><i>GET</i><span>/api/transfer</span></div><div class="pp-opts"><span class="on">Quick</span><span>Full</span><span>50 users</span></div><div class="pp-btns"><b class="cy">Run test</b><b class="pu">Export .jmx</b></div><div class="pp-spark"><i style="--h:30%"></i><i style="--h:55%"></i><i style="--h:42%"></i><i style="--h:70%"></i><i style="--h:48%"></i><i style="--h:62%"></i><i style="--h:38%"></i></div></div></div><span class="lbl">Chrome extension</span></div>
+          <div class="proj-body">
+            <h3>PerfPilot <small class="ext-tag">Load testing</small></h3>
+            <p class="desc">A JMeter-style performance testing tool that lives in a compact browser popup. Build, run and analyse load tests without leaving Chrome.</p>
+            <div class="chips"><span class="chip">JavaScript</span><span class="chip">Chrome Extensions API</span><span class="chip">Load testing</span><span class="chip">PDF reports</span><span class="chip">.jmx export</span></div>
+            <div class="case" hidden><ul><li><b>Goal:</b> make quick performance checks possible without setting up JMeter on a machine.</li><li><b>What I built:</b> a compact popup to create, configure and run load tests, with request recording, variables, timers, run history and results analysis. Tests export as JMeter <code>.jmx</code> files for bigger runs, and results export as a PDF report with a branded cover page.</li><li><b>Why it matters:</b> testers and developers can spot slow endpoints early, then hand the same test to a full JMeter setup when they need scale.</li></ul></div>
+            <button class="link" type="button" aria-expanded="false">View Case Study <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></button>
+          </div>
+        </article>
+        <article class="card proj rv ext">
+          <div class="thumb popup" aria-hidden="true"><div class="pp"><div class="pp-head"><span class="pp-logo"></span>Datalens</div><div class="pp-body"><div class="pp-bars"><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:60%"></i><i style="--h:95%"></i><i style="--h:70%"></i></div><div class="pp-table"><span></span><span></span><span></span></div><div class="pp-btns"><b class="cy">Scan page</b><b class="pu">PDF report</b></div></div></div><span class="lbl">Chrome extension</span></div>
+          <div class="proj-body">
+            <h3>Datalens <small class="ext-tag">Data analysis</small></h3>
+            <p class="desc">A Power BI-style analysis tool that works on any web system. It captures tables and API data from the page and turns them into charts and insights.</p>
+            <div class="chips"><span class="chip">JavaScript</span><span class="chip">Chrome Extensions API</span><span class="chip">Charts</span><span class="chip">PDF reports</span><span class="chip">REST API</span></div>
+            <div class="case" hidden><ul><li><b>Goal:</b> analyse data inside any web app, even ones with no export or reporting of their own.</li><li><b>What I built:</b> scanning that captures tables and API data from the current page, charts and insights built from that data, in-place table editing, scan history and PDF report export. It connects to a backend API secured with an API key.</li><li><b>Why it matters:</b> QA engineers and analysts can check and report on data where it lives, instead of copying it into spreadsheets first.</li></ul></div>
+            <button class="link" type="button" aria-expanded="false">View Case Study <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></button>
+          </div>
+        </article>
+      </div>
+      <div class="card gh-banner rv">
+        <svg class="big" aria-hidden="true"><use href="#gh"/></svg>
+        <div><h3>More of my code is on GitHub</h3><p>Automation suites, experiments and the tools I'm building, all in the open.</p></div>
+        <a class="btn solid" href="https://github.com/henry970" target="_blank" rel="noopener">github.com/henry970 <svg class="i"><use href="#arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="view" id="v-experience" hidden>
+  <header class="page-head">
+    <div class="portal small" aria-hidden="true"><span class="halo"></span><span class="ring"></span><span class="swirl"></span></div>
+    <div class="in">
+      <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8zM18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg>Experience</p>
+      <h1>My professional <span class="grad">journey</span></h1>
+      <p class="lede">Six years of testing across fintech, banking and e-commerce, plus the training and products I've built along the way.</p>
+    </div>
+  </header>
+  <section id="experience">
+    <div class="in">
+      <p class="kicker bar">Experience</p>
+      <h2 class="h2" style="margin-bottom:26px">My Professional Journey</h2>
+      <div class="hline">
+        <div class="stop rv"><span class="when">2022 – 2023</span><h3>QA Analyst</h3><p class="org">FirstBank (Exec200)</p><ul><li>Led testing for EMEMO and Token Dispatch Tracker</li><li>PowerApps testing and UAT</li></ul></div>
+        <div class="stop rv"><span class="when">2023 – 2025</span><h3>QA Engineer</h3><p class="org">Leatherback</p><ul><li>End-to-end testing of core banking workflows</li><li>API testing with Postman, regression and release validation</li></ul></div>
+        <div class="stop rv"><span class="when">2023 – Present</span><h3>Founder</h3><p class="org">ConfixHub</p><ul><li>Trained 200+ students in QA and automation</li><li>Created practical, hands-on programs</li></ul></div>
+        <div class="stop rv"><span class="when">2023 – Present</span><h3>Co-Founder</h3><p class="org">StoreToLet</p><ul><li>QA strategy and product testing</li><li>Web and mobile application testing</li></ul></div>
+        <div class="stop rv"><span class="when">2025 – Present</span><h3>Senior QA Engineer</h3><p class="org">Prune Payments</p><ul><li>Automation strategy for web, mobile and API</li><li>Includes a 6-month contract with Access Bank</li></ul></div>
+      </div>
+      <h3 class="sub-h rv">Full work history</h3><div class="card history full">
+        <div class="hrow"><span class="when">Apr 2025 – Present</span><div><b>Senior QA Engineer</b> · <span>Prune Payments Ltd</span><p>I lead quality for a payments product, owning the test automation strategy across web, mobile and API.</p><ul><li>Lead the end-to-end automation strategy for web and mobile apps with Selenium WebDriver (Python, pytest) and Appium, giving strong coverage across platforms.</li><li>Designed scalable frameworks for functional, regression, smoke and sanity testing, which sped up execution and cut manual effort.</li><li>Build and maintain API suites in Postman with JavaScript to validate backend services, data integrity and business logic.</li><li>Run automated suites in Jenkins and Git-based CI/CD pipelines for continuous testing and faster releases.</li><li>Cross-browser and cross-device testing on BrowserStack; load and stress testing with JMeter and LoadRunner.</li><li>Handle test planning, test case design, execution and reporting, plus defect tracking and root cause analysis on critical issues.</li><li>Introduced reusable components and modular test design to make automation easier to maintain.</li><li>Work with developers, product owners and DevOps in Agile ceremonies, with a shift-left focus. Mentor junior QA engineers on frameworks, API testing and best practices.</li></ul><div class="htags"><span class="chip">Selenium</span><span class="chip">pytest</span><span class="chip">Appium</span><span class="chip">Postman</span><span class="chip">Jenkins</span><span class="chip">BrowserStack</span><span class="chip">JMeter</span><span class="chip">LoadRunner</span></div></div></div>
+        <div class="hrow"><span class="when">6-month contract</span><div><b>QA Engineer (Contract)</b> · <span>Access Bank</span><p>A six-month contract with Access Bank, taken on alongside my role at Prune Payments.</p><ul><li>Brought my fintech testing and automation experience to banking applications.</li></ul></div></div>
+        <div class="hrow"><span class="when">2023 – Present</span><div><b>Founder</b> · <span>ConfixHub</span><p>I started ConfixHub to train new testers with practical, job-ready QA skills.</p><ul><li>Trained 200+ students in manual testing, test automation and QA practices.</li><li>Created hands-on training programs built around real testing work rather than theory.</li><li>Teach automation with Selenium and Python, API testing with Postman, and how to write clear test cases and bug reports.</li></ul></div></div>
+        <div class="hrow"><span class="when">Apr 2023 – Mar 2025</span><div><b>QA Engineer</b> · <span>Leatherback</span><p>QA engineer on a fintech and banking product, testing core banking workflows end to end.</p><ul><li>Conducted end-to-end testing of core banking functionalities, validating workflows from initiation to completion.</li><li>Tested critical banking operations, including account management, fund transfers, transaction processing, and beneficiary management.</li><li>Performed functional, regression, integration, and exploratory testing to ensure system stability and reliability.</li><li>Executed API testing using Postman to validate endpoints, request and response payloads, status codes, and error handling.</li><li>Validated transaction accuracy, status updates, business rules, and data consistency across banking workflows.</li><li>Designed and executed detailed test plans, test scenarios, and test cases based on business requirements and user stories.</li><li>Identified, documented, and tracked defects, providing clear reproduction steps, expected results, actual results, and supporting evidence.</li><li>Collaborated with developers, product managers, and other stakeholders to investigate defects and verify fixes.</li><li>Performed regression testing to ensure bug fixes and new features did not negatively affect existing functionalities.</li><li>Tested positive, negative, boundary, and edge-case scenarios to identify potential system vulnerabilities and functional gaps.</li><li>Validated API response structures, field-level validations, authentication, and error messages.</li><li>Participated in requirement reviews to identify gaps, ambiguities, and potential risks before implementation.</li><li>Supported release validation and smoke testing to confirm that critical banking functionalities worked as expected.</li><li>Contributed to improving test coverage, defect reporting, and overall software quality throughout the development lifecycle.</li></ul><div class="htags"><span class="chip">Postman</span><span class="chip">API testing</span><span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Integration</span><span class="chip">Exploratory</span><span class="chip">Smoke testing</span></div></div></div>
+        <div class="hrow"><span class="when">Nov 2022 – Apr 2023</span><div><b>QA Analyst</b> · <span>Exec200 Systems / FirstBank</span><p>QA analyst on internal banking solutions for FirstBank of Nigeria.</p><ul><li>Led testing for the EMEMO solution and the Token Dispatch Tracker.</li><li>Tested PowerApps solutions for user interface, functionality and data validation.</li><li>Executed manual test cases, documented and reported defects, and worked closely with developers to fix them.</li><li>Took part in user acceptance testing and gave feedback to refine the applications.</li><li>Helped write user documentation and training materials for end users.</li></ul><div class="htags"><span class="chip">Manual testing</span><span class="chip">UAT</span><span class="chip">PowerApps</span></div></div></div>
+        <div class="hrow"><span class="when">Jul 2022 – Mar 2023</span><div><b>Automation Training</b> · <span>Testify Limited</span><p>Hands-on automation work where I built test scripts and CI pipelines.</p><ul><li>Designed and built automated test scripts with Selenium and Python.</li><li>Integrated Selenium tests with Jenkins for continuous testing, reducing manual testing effort by 40%.</li><li>Built and maintained Jenkins pipelines for builds, tests and deployments, improving deployment efficiency by 30%.</li><li>Worked with development and QA teams to fix automation issues.</li><li>Led training sessions on test automation and continuous integration.</li></ul><div class="htags"><span class="chip">Selenium</span><span class="chip">Python</span><span class="chip">Jenkins</span></div></div></div>
+        <div class="hrow"><span class="when">Dec 2019 – Sep 2022</span><div><b>Software Tester</b> · <span>Independent</span><p>Where my testing career started.</p><ul><li>Led testing for the Thrilz Cleaning web application.</li><li>Worked with the development team to understand and assess testing requirements.</li><li>Wrote, documented and executed test cases to make sure the website worked as intended.</li></ul></div></div>
+        <div class="hrow"><span class="when">Education</span><div><b>HND, Mechanical Engineering</b> · <span>Yaba College of Technology</span><p>Higher National Diploma, January 2019 – June 2021.</p></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="view" id="v-blog" hidden>
+  <header class="page-head">
+    <div class="portal small" aria-hidden="true"><span class="halo"></span><span class="ring"></span><span class="swirl"></span></div>
+    <div class="in">
+      <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8zM18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg>Blog</p>
+      <h1>Notes from <span class="grad">testing</span></h1>
+      <p class="lede">Practical write-ups from real projects: automation, APIs, banking flows, performance and the craft of testing.</p>
+    </div>
+  </header>
+  <section id="blog-list">
+    <div class="in">
+      <div id="blog-index">
+        <div class="blog-tools rv">
+          <div class="filters" role="group" aria-label="Filter articles by topic"><button type="button" class="fchip on" data-f="all">All <b>10</b></button><button type="button" class="fchip" data-f="Automation">Automation <b>2</b></button><button type="button" class="fchip" data-f="Fintech">Fintech <b>1</b></button><button type="button" class="fchip" data-f="Performance">Performance <b>2</b></button><button type="button" class="fchip" data-f="Process">Process <b>2</b></button><button type="button" class="fchip" data-f="Career">Career <b>1</b></button><button type="button" class="fchip" data-f="API">API <b>1</b></button><button type="button" class="fchip" data-f="Mobile">Mobile <b>1</b></button></div>
+          <label class="search"><svg class="i" aria-hidden="true"><use href="#search"/></svg><input id="blog-q" type="search" placeholder="Search articles" aria-label="Search articles"></label>
+        </div>
+        <a class="card post-card rv featured" href="#post-orangehrm-suite" data-tag="Automation" data-text="inside my orangehrm test suite: selenium, pytest and github actions a walkthrough of my public orangehrm automation repo: how it is structured, how ci runs it, and what i would improve next."><span class="feat-flag">Featured</span><span class="pc-meta"><span class="pc-tag">Automation</span>6 min read</span><h3>Inside my OrangeHRM test suite: Selenium, pytest and GitHub Actions</h3><p>A walkthrough of my public OrangeHRM automation repo: how it is structured, how CI runs it, and what I would improve next.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+        <div class="post-grid" id="post-grid">
+          <a class="card post-card rv" href="#post-core-banking-checklist" data-tag="Fintech" data-text="testing core banking flows: the checklist i use account management, transfers, beneficiaries and transaction status: what i check end to end before a banking release."><span class="pc-meta"><span class="pc-tag">Fintech</span>6 min read</span><h3>Testing core banking flows: the checklist I use</h3><p>Account management, transfers, beneficiaries and transaction status: what I check end to end before a banking release.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-building-perfpilot" data-tag="Performance" data-text="why i built perfpilot, a load tester inside a chrome extension jmeter is powerful but heavy for a quick check. here is how i designed a compact, browser-based alternative."><span class="pc-meta"><span class="pc-tag">Performance</span>5 min read</span><h3>Why I built PerfPilot, a load tester inside a Chrome extension</h3><p>JMeter is powerful but heavy for a quick check. Here is how I designed a compact, browser-based alternative.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-bug-reports" data-tag="Process" data-text="writing bug reports developers actually like a good bug report gets fixed faster. this is the structure i use and the mistakes i avoid."><span class="pc-meta"><span class="pc-tag">Process</span>4 min read</span><h3>Writing bug reports developers actually like</h3><p>A good bug report gets fixed faster. This is the structure I use and the mistakes I avoid.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-jmeter-first-plan" data-tag="Performance" data-text="your first jmeter test plan, step by step a practical way to plan, build and read your first load test without drowning in jmeter options."><span class="pc-meta"><span class="pc-tag">Performance</span>5 min read</span><h3>Your first JMeter test plan, step by step</h3><p>A practical way to plan, build and read your first load test without drowning in JMeter options.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-training-testers" data-tag="Career" data-text="what training new testers taught me about testing teaching qa through confixhub sharpened my own habits. these are the lessons i keep coming back to."><span class="pc-meta"><span class="pc-tag">Career</span>4 min read</span><h3>What training new testers taught me about testing</h3><p>Teaching QA through ConfixHub sharpened my own habits. These are the lessons I keep coming back to.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-shift-left" data-tag="Process" data-text="shift-left testing: finding bugs before code is written the cheapest bug is the one caught in a requirement review. how i bring testing earlier in agile teams."><span class="pc-meta"><span class="pc-tag">Process</span>4 min read</span><h3>Shift-left testing: finding bugs before code is written</h3><p>The cheapest bug is the one caught in a requirement review. How I bring testing earlier in Agile teams.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-selenium-framework" data-tag="Automation" data-text="how i structure a selenium python framework the folder layout, fixtures and habits that keep a selenium suite easy to extend and easy to debug."><span class="pc-meta"><span class="pc-tag">Automation</span>5 min read</span><h3>How I Structure a Selenium Python Framework</h3><p>The folder layout, fixtures and habits that keep a Selenium suite easy to extend and easy to debug.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-payment-api-testing" data-tag="API" data-text="api testing best practices with postman &amp;amp; newman the checklist i run on payment apis, from money rules and duplicate requests to ledger checks in ci."><span class="pc-meta"><span class="pc-tag">API</span>5 min read</span><h3>API Testing Best Practices with Postman &amp; Newman</h3><p>The checklist I run on payment APIs, from money rules and duplicate requests to ledger checks in CI.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+          <a class="card post-card rv" href="#post-appium-mobile" data-tag="Mobile" data-text="mobile app testing with appium (android &amp;amp; ios) how i keep appium suites stable across devices, and the phone behaviours that hide the worst bugs."><span class="pc-meta"><span class="pc-tag">Mobile</span>4 min read</span><h3>Mobile App Testing with Appium (Android &amp; iOS)</h3><p>How I keep Appium suites stable across devices, and the phone behaviours that hide the worst bugs.</p><span class="link">Read article <svg class="i" style="width:16px;height:16px"><use href="#arrow"/></svg></span></a>
+        </div>
+        <p class="no-posts" id="no-posts" hidden>No articles match that yet. Try another topic or search term.</p>
+      </div>
+      <div class="reading" id="reading" hidden>
+        <div class="read-top"><a class="link" href="#blog"><svg class="i" style="width:16px;height:16px;transform:rotate(180deg)"><use href="#arrow"/></svg>All articles</a><button class="btn blue" type="button" id="share-post">Copy link to this article</button></div>
+        <span class="share-note" id="share-note" aria-live="polite"></span>
+        <div class="card reader-card">
+        <article class="post" id="post-orangehrm-suite" data-i="0" hidden><p class="post-meta"><span class="pc-tag">Automation</span>6 min read · Henry Okolie</p><h2>Inside my OrangeHRM test suite: Selenium, pytest and GitHub Actions</h2><p class="post-sum">A walkthrough of my public OrangeHRM automation repo: how it is structured, how CI runs it, and what I would improve next.</p><div class="post-body"><p>OrangeHRM's public demo is a good playground for UI automation: a real login, real navigation and several modules to cover. I used it to build a small but complete Selenium suite you can read on <a href="https://github.com/henry970/Orange_Automation" target="_blank" rel="noopener">GitHub</a>.</p>
+<h4>The layout</h4>
+<p>The suite follows the Page Object Model. Locators live in their own classes (<code>loginLocators.py</code>, <code>Admin_page_locators.py</code> and so on), and the page classes hold the actions a user can take. Tests only call those actions.</p>
+<ul><li><b>Locators:</b> one class per module (Login, Admin, PIM, Leave, Time).</li><li><b>Pages:</b> methods like <code>enter_username()</code> and <code>click_admin_button()</code>.</li><li><b>Tests:</b> one file, <code>test_Orange.py</code>, with a test per module.</li></ul>
+<h4>One browser, one login</h4>
+<p>A module-scoped fixture starts headless Chrome once and a second fixture opens the login page, so every test shares the same session:</p>
+<pre data-lang="python"><code>@pytest.fixture(scope=&quot;module&quot;)
+def driver_setup():
+    chrome_options = Options()
+    chrome_options.add_argument(&quot;--headless&quot;)
+    chrome_options.add_argument(&quot;--no-sandbox&quot;)
+    chrome_options.add_argument(&quot;--window-size=1920x1080&quot;)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    driver.implicitly_wait(20)
+    yield driver
+    driver.quit()
+
+
+@pytest.fixture(scope=&quot;module&quot;)
+def login(driver_setup):
+    login_page = LoginPage(driver_setup)
+    login_page.open_login_page(&quot;https://opensource-demo.orangehrmlive.com/web/index.php/auth/login&quot;)
+    return login_page</code></pre>
+<h4>Waiting for the page, not guessing</h4>
+<p>Page actions wait for the element before touching it, which removes most flakiness on a slow demo server:</p>
+<pre data-lang="python"><code>def enter_username(self, username):
+    username_field = WebDriverWait(self.driver, 20).until(
+        EC.presence_of_element_located(ActionPageLocators.USERNAME_FIELD))
+    username_field.send_keys(username)</code></pre>
+<h4>CI on every push</h4>
+<p>A GitHub Actions workflow installs the dependencies, runs pytest and uploads the HTML report, even when a test fails:</p>
+<pre data-lang="yaml"><code>- name: Run tests
+  run: |
+    source venv/bin/activate
+    pytest --html=report.html -p no:warnings
+
+- name: Upload HTML report
+  if: always()
+  uses: actions/upload-artifact@v3
+  with:
+    name: pytest-report
+    path: report.html</code></pre>
+<p>The latest saved report shows all five tests passing in 55 seconds.</p>
+<h4>What I would improve next</h4>
+<p>Reviewing your own old code is a good habit. Here is my list for this repo:</p>
+<ul><li><b>Add assertions.</b> Each test should check something visible, like the dashboard header after login, not only that the clicks worked.</li><li><b>Replace absolute XPaths</b> with shorter, attribute-based locators so a layout change does not break every test.</li><li><b>Remove the fixed <code>time.sleep()</code></b> after login and wait for the dashboard instead.</li><li><b>Add negative tests</b> such as a wrong password and empty fields.</li></ul></div></article>
+        <article class="post" id="post-core-banking-checklist" data-i="1" hidden><p class="post-meta"><span class="pc-tag">Fintech</span>6 min read · Henry Okolie</p><h2>Testing core banking flows: the checklist I use</h2><p class="post-sum">Account management, transfers, beneficiaries and transaction status: what I check end to end before a banking release.</p><div class="post-body"><p>Most of my work has been on payments and banking products. In that world a bug is rarely a crash. It is a transfer that shows "successful" but never lands, or a balance that is off by one decimal place. This is the checklist I work through.</p>
+<h4>1. Follow the money end to end</h4>
+<p>I test each workflow from initiation to completion, not screen by screen. For a transfer that means: create, authorise, process, settle, notify, and confirm the receipt and both balances.</p>
+<h4>2. Account management</h4>
+<ul><li>Opening, updating and closing accounts with valid and invalid data.</li><li>Restrictions: frozen, dormant or limited accounts must block the right actions.</li><li>Profile changes that need re-verification really do trigger it.</li></ul>
+<h4>3. Transfers and transaction processing</h4>
+<ul><li>Amounts at and around the limits: zero, the minimum, the daily limit, one unit over.</li><li>Insufficient balance, duplicate submissions and retries.</li><li>Status updates in the right order, with no jumps backwards.</li></ul>
+<h4>4. Beneficiary management</h4>
+<p>Adding, editing and deleting beneficiaries, name enquiry before saving, and making sure a deleted beneficiary cannot still receive funds from a saved shortcut.</p>
+<h4>5. Data consistency</h4>
+<p>The same transaction must show the same amount, status and reference in the app, the API response, the statement and the admin view. When two of them disagree, I raise it even if the user-facing screen looks fine.</p>
+<h4>6. The API underneath</h4>
+<p>With Postman I validate endpoints, payloads, status codes, field-level validation, authentication and error messages. Many UI bugs are easier to prove at the API layer.</p>
+<h4>7. Regression and release</h4>
+<p>Every fix and feature gets a regression pass on the critical flows, then a smoke test during release validation to confirm that login, balance, transfer and history still work in the live build.</p></div></article>
+        <article class="post" id="post-building-perfpilot" data-i="2" hidden><p class="post-meta"><span class="pc-tag">Performance</span>5 min read · Henry Okolie</p><h2>Why I built PerfPilot, a load tester inside a Chrome extension</h2><p class="post-sum">JMeter is powerful but heavy for a quick check. Here is how I designed a compact, browser-based alternative.</p><div class="post-body"><p>I like JMeter, but setting it up for a five-minute "is this endpoint slow?" check always felt like too much. I wanted something that lives where I already work: the browser. That became PerfPilot.</p>
+<h4>Design rule: stay small</h4>
+<p>PerfPilot is a compact popup, not a full-screen workspace. Every feature had to fit a small window: pick a request, choose Quick or Full mode, set the load, run.</p>
+<h4>What it does</h4>
+<ul><li><b>Recording</b> to capture real requests instead of typing them in.</li><li><b>Variables and timers</b> so tests behave more like real users.</li><li><b>Run history</b> to compare today's numbers with last week's.</li><li><b>Results analysis</b> right in the popup.</li></ul>
+<h4>Working with JMeter, not against it</h4>
+<p>For bigger runs, PerfPilot exports the test as a JMeter <code>.jmx</code> file. Start a test quickly in the browser, then hand the same scenario to a full JMeter setup when you need scale.</p>
+<h4>Reports people can share</h4>
+<p>Results export as a PDF with a branded cover page, so a test run can go straight into a release note or a client update.</p>
+<h4>What I learned</h4>
+<p>Building a testing tool changed how I test. When you have to decide what to show in a tiny popup, you learn which numbers actually matter: response times under load, error rates, and how both change as users increase.</p></div></article>
+        <article class="post" id="post-bug-reports" data-i="3" hidden><p class="post-meta"><span class="pc-tag">Process</span>4 min read · Henry Okolie</p><h2>Writing bug reports developers actually like</h2><p class="post-sum">A good bug report gets fixed faster. This is the structure I use and the mistakes I avoid.</p><div class="post-body"><p>A bug report is a small piece of writing with one job: let a developer see the problem without asking you a single question. Here is the structure I use.</p>
+<h4>A title that says what broke</h4>
+<p>"Transfer fails" is a complaint. "Transfer to saved beneficiary returns 500 when amount has 3 decimal places" is a bug report. Include the feature, the action and the condition.</p>
+<h4>Steps anyone can repeat</h4>
+<p>Numbered, one action per step, starting from a known state: which account, which environment, which build.</p>
+<h4>Expected vs actual</h4>
+<p>Two short lines. The gap between them is the bug. If you can't write the expected result, check the requirement first.</p>
+<h4>Evidence</h4>
+<ul><li>A screenshot or short screen recording.</li><li>The API request and response when the UI is hiding the real error.</li><li>Logs or the transaction reference, so the developer can find it in the backend.</li></ul>
+<h4>Severity is not priority</h4>
+<p>Severity is how bad the impact is. Priority is how soon it should be fixed. A typo on the login page can be low severity but high priority before a launch.</p>
+<h4>Then follow through</h4>
+<p>Retest the fix on the build it shipped in, run regression around it, and close the bug with a note on what you verified.</p></div></article>
+        <article class="post" id="post-jmeter-first-plan" data-i="4" hidden><p class="post-meta"><span class="pc-tag">Performance</span>5 min read · Henry Okolie</p><h2>Your first JMeter test plan, step by step</h2><p class="post-sum">A practical way to plan, build and read your first load test without drowning in JMeter options.</p><div class="post-body"><p>JMeter can look overwhelming. You only need a handful of pieces to run a useful first load test.</p>
+<h4>1. Decide the question first</h4>
+<p>"Can login handle 200 users in 5 minutes with responses under 2 seconds?" is a test. "Let's load test the app" is not. Write the question, the target numbers and the endpoint before opening JMeter.</p>
+<h4>2. The minimum test plan</h4>
+<ul><li><b>Thread Group:</b> number of users, ramp-up time and loop count.</li><li><b>HTTP Request:</b> the endpoint, method and body.</li><li><b>HTTP Header Manager:</b> content type and auth token.</li><li><b>CSV Data Set Config:</b> different test users, so you aren't hammering one account.</li><li><b>Listeners:</b> a summary report while you build, then off during real runs.</li></ul>
+<h4>3. Ramp up, don't spike</h4>
+<p>Start small, then increase users in steps. If response times jump at a certain level, you have found the interesting part of the system.</p>
+<h4>4. Run from the command line</h4>
+<p>The GUI is for building. For real runs use non-GUI mode, which uses far fewer resources:</p>
+<pre data-lang="bash"><code>jmeter -n -t login_test.jmx -l results.jtl -e -o report/</code></pre>
+<h4>5. Read the right numbers</h4>
+<p>Look at the 90th and 95th percentile response times, not only the average, plus the error rate and throughput. An average of 800 ms can hide a slow tail that real users feel.</p>
+<h4>6. Report it plainly</h4>
+<p>One page: the question, the load you applied, the results against the target, and where things started to degrade.</p></div></article>
+        <article class="post" id="post-training-testers" data-i="5" hidden><p class="post-meta"><span class="pc-tag">Career</span>4 min read · Henry Okolie</p><h2>What training new testers taught me about testing</h2><p class="post-sum">Teaching QA through ConfixHub sharpened my own habits. These are the lessons I keep coming back to.</p><div class="post-body"><p>Through ConfixHub I've trained more than 200 people in QA and automation. Teaching something is the fastest way to find out how well you really understand it.</p>
+<h4>Start with thinking, not tools</h4>
+<p>New testers want to jump into Selenium. The ones who grow fastest first learn to read a requirement and ask "what could go wrong here?" Tools come easier after that.</p>
+<h4>Test cases are a writing skill</h4>
+<p>A test case someone else can run without help is harder to write than it looks. Clear steps, one expected result per case, and positive and negative scenarios side by side.</p>
+<h4>Automation is for repetition</h4>
+<p>Automate what you'll check again and again: regression, smoke tests, API rules. Keep exploratory testing human, because that is where the surprising bugs come from.</p>
+<h4>Practice on real apps</h4>
+<p>Demo sites like OrangeHRM give learners real logins, real navigation and real bugs to find. A project they can put on GitHub is worth more than a certificate alone.</p>
+<h4>Communication is half the job</h4>
+<p>Finding a bug is useless if nobody understands the report. I spend as much time on bug reporting and talking to developers as on the testing itself.</p></div></article>
+        <article class="post" id="post-shift-left" data-i="6" hidden><p class="post-meta"><span class="pc-tag">Process</span>4 min read · Henry Okolie</p><h2>Shift-left testing: finding bugs before code is written</h2><p class="post-sum">The cheapest bug is the one caught in a requirement review. How I bring testing earlier in Agile teams.</p><div class="post-body"><p>"Shift left" means moving testing earlier in the process. In practice, it means a tester is in the room before the first line of code.</p>
+<h4>Review requirements like test cases</h4>
+<p>For each user story I ask: what happens with empty input, the maximum value, a duplicate, an expired session, no network? If the story doesn't answer it, that's a gap to raise in refinement, not a bug to find in two weeks.</p>
+<h4>Write acceptance criteria together</h4>
+<p>When product, developers and QA agree on the criteria up front, everyone is building and testing against the same definition of done.</p>
+<h4>Test the API before the UI</h4>
+<p>APIs are usually ready first. Testing them with Postman while the screens are still being built catches business-rule bugs days earlier.</p>
+<h4>Automate smoke tests in the pipeline</h4>
+<p>A small automated suite that runs on every merge tells the team within minutes when something critical breaks.</p>
+<h4>Keep testing on the right too</h4>
+<p>Shift-left doesn't replace release validation. Smoke tests on the live build and regression on critical flows still matter, especially in fintech.</p></div></article>
+        <article class="post" id="post-selenium-framework" data-i="7" hidden><p class="post-meta"><span class="pc-tag">Automation</span>5 min read · Henry Okolie</p><h2>How I Structure a Selenium Python Framework</h2><p class="post-sum">The folder layout, fixtures and habits that keep a Selenium suite easy to extend and easy to debug.</p><div class="post-body"><p>A good framework makes the next test easy to write and a failing test easy to understand.</p>
+          <h4>Pages, tests and config live apart</h4><p>Three folders: <code>pages/</code>, <code>tests/</code> and <code>config/</code>. Tests never hold locators, and page objects never hold assertions.</p>
+          <h4>One page object per screen</h4><p>Each page class holds its locators and the actions a user can take. When the UI changes, I fix one file, not fifty tests.</p>
+          <h4>Fixtures do the setup</h4><p>A <code>conftest.py</code> fixture starts the browser and cleans up after. A command-line flag picks browser and environment, so the same suite runs locally and in CI.</p>
+          <h4>Waits, never sleeps</h4><p>Explicit waits for visible or clickable elements. Fixed sleeps make a suite slow and flaky at once.</p>
+          <h4>Markers and reports</h4><p>Tests are tagged smoke, regression or sanity. Failures save a screenshot and URL into an HTML report a developer can read without rerunning anything.</p></div></article>
+        <article class="post" id="post-payment-api-testing" data-i="8" hidden><p class="post-meta"><span class="pc-tag">API</span>5 min read · Henry Okolie</p><h2>API Testing Best Practices with Postman &amp; Newman</h2><p class="post-sum">The checklist I run on payment APIs, from money rules and duplicate requests to ledger checks in CI.</p><div class="post-body"><p>A payment API can return 200 OK and still lose someone's money. This is the checklist I run before an endpoint ships.</p>
+          <h4>The money rules</h4><p>Zero, negative, tiny and huge amounts, extra decimals, more than the balance or limit. Rejected requests need clear errors and untouched balances.</p>
+          <h4>Send it twice</h4><p>Same reference or idempotency key: the money moves once. Then two at the same moment, to catch race conditions.</p>
+          <h4>Follow the status and the ledger</h4><p>Pending goes forward, never back. Debits equal credits, and balance, ledger and report all agree.</p>
+          <h4>Wrong user, wrong token</h4><p>No token, expired token, someone else's token. Nobody sees or moves money that isn't theirs.</p>
+          <h4>Run it on every push</h4><p>Collections live in Git and Newman runs them in CI, so a broken rule fails the pipeline, not a customer.</p></div></article>
+        <article class="post" id="post-appium-mobile" data-i="9" hidden><p class="post-meta"><span class="pc-tag">Mobile</span>4 min read · Henry Okolie</p><h2>Mobile App Testing with Appium (Android &amp; iOS)</h2><p class="post-sum">How I keep Appium suites stable across devices, and the phone behaviours that hide the worst bugs.</p><div class="post-body"><p>Mobile bugs hide in the gaps between devices. Here's how I keep Appium suites useful instead of flaky.</p>
+          <h4>Stable locators</h4><p>Accessibility IDs on key elements work on both platforms and survive layout changes. XPath is the last resort.</p>
+          <h4>Shared flows</h4><p>One page-object interface over UiAutomator2 and XCUITest, so most tests run on both platforms.</p>
+          <h4>Known starting state</h4><p>Fresh install for onboarding tests, logged-in session for the rest, and no test depends on run order.</p>
+          <h4>Test what phones do</h4><p>Rotation, backgrounding mid-payment, slow networks, permission prompts, notifications.</p>
+          <h4>A device matrix</h4><p>One emulator per push; the full suite across real devices on BrowserStack before release.</p></div></article>
+          <aside class="author"><span class="av">HO</span><div><b>Henry Okolie</b><p>Senior QA Engineer in Lagos. I test and automate fintech and banking products, and train new testers through ConfixHub.</p><div class="author-links"><a href="https://www.linkedin.com/in/henry-okolie-09585b22b" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/henry970" target="_blank" rel="noopener">GitHub</a><a href="#contact">Contact me</a></div></div></aside>
+        </div>
+        <nav class="prevnext" aria-label="More articles"><a id="prev-post" class="card pn" href="#blog"></a><a id="next-post" class="card pn" href="#blog"></a></nav>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="view" id="v-contact" hidden>
+  <header class="page-head">
+    <div class="portal small" aria-hidden="true"><span class="halo"></span><span class="ring"></span><span class="swirl"></span></div>
+    <div class="in">
+      <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8zM18 13l.9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z"/></svg>Contact</p>
+      <h1>Let's work <span class="grad">together</span></h1>
+      <p class="lede">Hiring, or have a product that needs testing before launch? I'd like to hear about it.</p>
+    </div>
+  </header>
+  <section id="contact-sec">
+    <div class="in contact">
+      <div class="rv">
+        <p class="lead">Open to Senior QA and SDET roles, freelance testing projects and mentorship. Email is the quickest way to reach me.</p>
+        <div class="ways">
+          <div class="way"><span class="sq"><svg class="i"><use href="#mail"/></svg></span><div><b>Email</b><span class="v" id="email">okoliehenry91@gmail.com</span></div></div>
+          <div class="way"><span class="sq"><svg class="i"><use href="#phone"/></svg></span><div><b>Phone</b><span class="v">0811 514 9265</span></div></div>
+          <div class="way"><span class="sq"><svg class="i"><use href="#in"/></svg></span><div><b>LinkedIn</b><a href="https://www.linkedin.com/in/henry-okolie-09585b22b" target="_blank" rel="noopener">henry-okolie-09585b22b</a></div></div>
+          <div class="way"><span class="sq"><svg class="i"><use href="#gh"/></svg></span><div><b>GitHub</b><a href="https://github.com/henry970" target="_blank" rel="noopener">github.com/henry970</a></div></div>
+          <div class="way"><span class="sq"><svg class="i"><use href="#pin"/></svg></span><div><b>Based in</b><span class="v">Lagos, Nigeria</span></div></div>
+        </div>
+        <button class="btn blue" type="button" id="copy" style="margin-top:22px">Copy Email</button>
+        <p class="copied" id="copied" aria-live="polite"></p>
+      </div>
+      <form class="card form rv" id="form" novalidate>
+        <h3>Send me a message</h3>
+        <label>Your name<input id="f-name" type="text" autocomplete="name" placeholder="Jane Doe"></label>
+        <label>Your email<input id="f-email" type="email" autocomplete="email" placeholder="jane@company.com"></label>
+        <label class="full">Message<textarea id="f-msg" placeholder="Tell me about the role or project"></textarea></label>
+        <p class="err" id="f-err" aria-live="polite"></p>
+        <button class="btn solid" type="submit">Prepare Message <svg class="i"><use href="#arrow"/></svg></button>
+        <div class="out" id="out" hidden>
+          <p><b>Your message is ready.</b> Copy it and send it to <b>okoliehenry91@gmail.com</b>.</p>
+          <pre id="out-text"></pre>
+          <div class="row2"><button class="btn blue" type="button" id="copy-msg">Copy message</button><span id="copied2" aria-live="polite"></span></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+  <dialog class="dlg" id="case-dlg" aria-labelledby="case-title"><button class="x" type="button" aria-label="Close" data-close>&times;</button><p class="kicker">Case study</p><h3 id="case-title"></h3><div class="chips" id="case-chips"></div><div id="case-body"></div></dialog>
+</main>
+
+<footer>
+  <div class="in">
+    <a class="brand" href="#home"><span class="logo">H<b>O</b></span><span><strong>Henry Okolie</strong><small>QA Engineer</small></span></a>
+    <nav aria-label="Footer"><a href="#home">Home</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
+    <div class="fsoc">
+      <a class="sq" href="https://www.linkedin.com/in/henry-okolie-09585b22b" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#in"/></svg></a>
+      <a class="sq" href="https://github.com/henry970" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#gh"/></svg></a>
+      <a class="sq" href="#contact" aria-label="Email"><svg class="i"><use href="#mail"/></svg></a>
+      <a class="sq" href="#home" aria-label="Back to top"><svg class="i"><use href="#up"/></svg></a>
+    </div>
+  </div>
+  <div class="legal"><div class="in">© <span class="bug" id="bug" tabindex="0" role="button" aria-label="Copyright year">2062</span> Henry Okolie, Lagos · <span class="score" id="score" hidden>Bugs squashed: <b id="score-n">0</b> · </span><span class="hunt" id="hunt">There's one bug on this page. Found it?</span></div></div>
+</footer>
+
+<script>
+(function(){
+  function swap(btn,text){var svg=btn.querySelector('svg');btn.textContent=text+' ';if(svg)btn.appendChild(svg)}
+  function group(btnId,sel,a,b){var btn=document.getElementById(btnId);btn.addEventListener('click',function(){var o=btn.getAttribute('aria-expanded')!=='true';document.querySelectorAll(sel).forEach(function(e){e.hidden=!o});btn.setAttribute('aria-expanded',o);swap(btn,o?b:a)})}
+
+  /* dialogs */
+  function open(id){var d=document.getElementById(id);if(!d)return;if(typeof d.showModal==='function'){if(!d.open)d.showModal()}else{d.setAttribute('open','')}}
+  function close(d){if(typeof d.close==='function')d.close();else d.removeAttribute('open')}
+  document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();open(b.dataset.open)})});
+  document.querySelectorAll('dialog').forEach(function(d){
+    d.addEventListener('click',function(e){if(e.target===d){var r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close(d)}});
+    d.querySelectorAll('[data-close]').forEach(function(x){x.addEventListener('click',function(){close(d)})});
+  });
+
+  /* case studies */
+  var cd=document.getElementById('case-dlg');
+  document.querySelectorAll('.proj button.link').forEach(function(b){b.addEventListener('click',function(){
+    var card=b.closest('.proj');
+    document.getElementById('case-title').textContent=card.querySelector('h3').textContent;
+    var ch=document.getElementById('case-chips');ch.innerHTML='';card.querySelectorAll('.chip').forEach(function(c){ch.appendChild(c.cloneNode(true))});
+    var body=document.getElementById('case-body');body.innerHTML='';[].slice.call(card.querySelector('.case').childNodes).forEach(function(n){body.appendChild(n.cloneNode(true))});
+    open('case-dlg');
+  })});
+
+
+  document.getElementById('copy').addEventListener('click',function(){var el=document.getElementById('email'),out=document.getElementById('copied');
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);out.textContent='Selected. Press Ctrl+C to copy.'}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){out.textContent='Email copied.'},sel)}catch(e){sel()}});
+
+  /* marquee: duplicate the tool list so it loops */
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var track=document.getElementById('track');
+  if(track&&!reduce){[].slice.call(track.children).forEach(function(n){var c=n.cloneNode(true);c.setAttribute('aria-hidden','true');track.appendChild(c)})}
+
+  /* count-up stats (final values are already in the HTML) */
+  var nums=[].slice.call(document.querySelectorAll('[data-count]'));
+  function run(el){var end=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',t0=null;
+    function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1200),e=1-Math.pow(1-k,3);el.textContent=pre+Math.round(end*e)+suf;if(k<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f)}
+  if(!reduce&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.6});nums.forEach(function(n){io.observe(n)})}
+
+
+  /* starfield */
+  (function(){var c=document.getElementById('stars');if(!c||!c.getContext)return;var x=c.getContext('2d'),dpr=Math.min(innerWidth<780?1.5:2,window.devicePixelRatio||1),W,H,st=[];
+    function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);var n=Math.round(W*H/(W<780?11000:5200));st=[];for(var i=0;i<n;i++)st.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+.2,a:Math.random(),s:Math.random()*.015+.004,v:Math.random()*.12+.02})}
+    function draw(t){x.clearRect(0,0,W,H);for(var i=0;i<st.length;i++){var p=st[i];var o=reduce?p.a:.35+.65*Math.abs(Math.sin(t*p.s*.06+i));x.globalAlpha=o;x.fillStyle=i%11?'#E9E4FF':'#B9A4FF';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();if(!reduce){p.y-=p.v;if(p.y<-2){p.y=H+2;p.x=Math.random()*W}}}x.globalAlpha=1;if(!reduce&&!document.hidden)requestAnimationFrame(draw)}
+    size();addEventListener('resize',function(){size();if(reduce)draw(0)});document.addEventListener('visibilitychange',function(){if(!document.hidden&&!reduce)requestAnimationFrame(draw)});requestAnimationFrame(draw)})();
+  /* bug hunt */
+  var bug=document.getElementById('bug'),hunt=document.getElementById('hunt');
+  function found(){if(bug.classList.contains('found'))return;bug.textContent='2026';bug.classList.add('found');bug.removeAttribute('role');bug.removeAttribute('tabindex');hunt.textContent='Nice catch. It said 2062. You think like a tester.';hunt.classList.add('won');var r=bug.getBoundingClientRect();window.__confetti&&window.__confetti(r.left+r.width/2,r.top,80)}
+  bug.addEventListener('click',found);bug.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();found()}});
+
+
+  /* ---------- motion on every page ---------- */
+  var REV='.sec-top,.card:not(.history):not(.reader),.stop,.hrow,.way,.focus .chip,.htags .chip,.about-txt > *,.sub-h,.contact .lead,.strip .lab';
+  var io=null,seen=new WeakSet();
+  function animIn(el,delay,from){if(reduce||!el.animate)return;el.animate([{opacity:0,transform:from||'translateY(28px) scale(.98)'},{opacity:1,transform:'none'}],{duration:700,delay:delay,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'})}
+  function fromFor(el){if(el.classList.contains('hrow')||el.classList.contains('way'))return 'translateX(-26px)';if(el.classList.contains('tool')||el.classList.contains('chip'))return 'translateY(16px) scale(.85)';return null}
+  function drawLine(view){var h=view.querySelector('.hline');if(!h||reduce||!h.animate)return;try{h.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:1400,easing:'cubic-bezier(.6,0,.2,1)',pseudoElement:'::before'})}catch(e){}}
+  window.__revealView=function(view){
+    if(reduce||!('IntersectionObserver' in window))return;
+    if(io)io.disconnect();
+    var els=[].slice.call(view.querySelectorAll(REV)).filter(function(e){return !e.closest('dialog')&&!e.closest('.hero')});
+    var vh=innerHeight,now=[],later=[];
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.bottom<0)return;(r.top<vh?now:later).push(e)});
+    now.forEach(function(e,i){animIn(e,Math.min(i*55,600),fromFor(e))});
+    io=new IntersectionObserver(function(es){var k=0;es.forEach(function(en){if(en.isIntersecting){animIn(en.target,Math.min(k++*70,420),fromFor(en.target));io.unobserve(en.target);if(en.target.classList.contains('stop')&&!seen.has(view)){seen.add(view);drawLine(view)}}})},{rootMargin:'0px 0px 18% 0px'});
+    later.forEach(function(e){io.observe(e)});
+    if(view.querySelector('.hline')&&view.querySelector('.hline').getBoundingClientRect().top<vh)drawLine(view);
+  };
+
+  /* scroll progress */
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')'}
+  addEventListener('scroll',prog,{passive:true});addEventListener('resize',prog);
+
+  /* card spotlight + tilt (mouse only) */
+  if(!reduce){
+    document.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var c=e.target.closest&&e.target.closest('.card');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+      var t=e.target.closest('.proj,.post-card,.closer');if(t){var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.classList.add('tilt');t.style.transform='perspective(900px) rotateX('+(-y*6).toFixed(2)+'deg) rotateY('+(x*7).toFixed(2)+'deg) translateY(-4px)'}},{passive:true});
+    document.addEventListener('pointerout',function(e){var t=e.target.closest&&e.target.closest('.proj,.post-card,.closer');if(t&&!t.contains(e.relatedTarget)){t.classList.remove('tilt');t.style.transform=''}var c=e.target.closest&&e.target.closest('.card');if(c&&!c.contains(e.relatedTarget)){c.style.removeProperty('--mx');c.style.removeProperty('--my')}});
+  }
+
+
+  /* ---------- break-the-login demo ---------- */
+  (function(){var f=document.getElementById('demo-form');if(!f)return;
+    var E=document.getElementById('d-email'),P=document.getElementById('d-pass'),M=document.getElementById('d-msg'),C=document.getElementById('d-count'),B=document.getElementById('d-bar'),W=document.getElementById('d-win'),fails=0,locked=false,got={},total=10;
+    function hit(k){var li=document.querySelector('#d-list li[data-case="'+k+'"]');if(!li||got[k])return;got[k]=1;li.classList.add('hit','flash');var nm=li.querySelector('.nm');nm.textContent=nm.dataset.name;setTimeout(function(){li.classList.remove('flash')},800);var n=Object.keys(got).length;C.textContent=n+' / '+total;B.style.width=(n/total*100)+'%';if(n===total){W.hidden=false;var r=W.getBoundingClientRect();window.__confetti&&window.__confetti(r.left+r.width/2,r.top,160);toast('10 / 10! You think like a tester 🎉')}}
+    function say(t,kind){M.textContent=t;M.className='d-msg'+(kind?' '+kind:'');if(kind==='bad'){f.classList.remove('shake');void f.offsetWidth;f.classList.add('shake')}}
+    f.addEventListener('submit',function(e){e.preventDefault();var raw=E.value,p=P.value,em=raw.trim();
+      if(locked){say('This account is locked after 3 failed attempts. Use "Reset the form" to try again.','bad');return}
+      if(!em||!p){hit('empty');say('Email and password are both required.','bad');return}
+      if(raw.length>100||p.length>100){hit('long');say('Input is limited to 100 characters, so this was rejected before it reached the server.','bad');return}
+      if(/<\s*\/?\s*script|<[^>]*\bon\w+\s*=|javascript:/i.test(raw+p)){hit('xss');say('HTML and scripts are treated as plain text here, so nothing ran.','bad');return}
+      if(/('|"|--|;|\/\*)|\b(or|and)\b\s+\S+\s*=\s*\S+|\bunion\b\s+\bselect\b|\bdrop\b\s+\btable\b/i.test(raw+' '+p)){hit('sqli');say('Suspicious input blocked. Queries use parameters, so injection gets nowhere.','bad');return}
+      var note='';if(raw!==em){hit('trim');note='Spaces around the email were trimmed. '}
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){hit('format');say(note+'That email address isn’t in a valid format.','bad');return}
+      if(p.length<8){hit('short');say(note+'Passwords must be at least 8 characters.','bad');return}
+      var lower=em.toLowerCase();if(lower==='qa@henry.dev'&&em!==lower){hit('case');note+='Email matched regardless of letter case. '}
+      if(lower==='qa@henry.dev'&&p==='Test@1234'){hit('happy');fails=0;say(note+'Signed in. Welcome back! (happy path passed)','good');return}
+      fails++;if(fails>=3){locked=true;hit('lockout');say('Wrong password 3 times. The account is now locked.','bad');return}
+      say(note+'Wrong email or password. '+(3-fails)+' attempt'+(3-fails===1?'':'s')+' left before lockout.','bad');
+    });
+    document.getElementById('d-reset').addEventListener('click',function(){f.reset();fails=0;locked=false;say('Form reset. Your found test cases are kept.')});
+    document.getElementById('d-reveal').addEventListener('click',function(){Object.keys({empty:1,format:1,short:1,trim:1,'case':1,long:1,sqli:1,xss:1,happy:1,lockout:1}).forEach(hit)});
+  })();
+
+
+  /* ---------- blog: filters, search, reading view ---------- */
+  (function(){var grid=document.getElementById('post-grid');if(!grid)return;
+    var cards=[].slice.call(document.querySelectorAll('#blog-index .post-card')),chips=[].slice.call(document.querySelectorAll('.fchip')),q=document.getElementById('blog-q'),none=document.getElementById('no-posts'),f='all';
+    function apply(){var t=(q.value||'').trim().toLowerCase(),n=0;cards.forEach(function(c){var ok=(f==='all'||c.dataset.tag===f)&&(!t||c.dataset.text.indexOf(t)>=0);c.hidden=!ok;if(ok)n++});none.hidden=n>0}
+    chips.forEach(function(b){b.addEventListener('click',function(){f=b.dataset.f;chips.forEach(function(x){x.classList.toggle('on',x===b)});apply()})});
+    q.addEventListener('input',apply);
+    /* highlight code */
+    var KW=/\b(def|return|import|from|class|if|else|yield|with|as|for|in|not|and|or|try|except|True|False|None|self|run|uses|name|path|if)\b/;
+    document.querySelectorAll('.post-body pre code').forEach(function(c){var src=c.textContent,lang=c.parentNode.dataset.lang,out='';
+      var re=lang==='yaml'?/(#[^\n]*)|("[^"\n]*"|'[^'\n]*')|(^\s*-?\s*[\w-]+(?=:))|(\b\d[\d.]*\b)/gm:/(#[^\n]*)|("[^"\n]*"|'[^'\n]*')|(@\w+|\bdef\b|\breturn\b|\bimport\b|\bfrom\b|\bclass\b|\byield\b|\bwith\b|\bas\b|\bfor\b|\bin\b|\bif\b|\belse\b|\bnot\b|\bTrue\b|\bFalse\b|\bNone\b|\bself\b)|(\b\d[\d.]*\b)/g;
+      var last=0,m;function esc(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+      while((m=re.exec(src))){out+=esc(src.slice(last,m.index));var cls=m[1]?'tk-c':m[2]?'tk-s':m[3]?(lang==='yaml'?'tk-y':(m[3][0]==='@'?'tk-d':'tk-k')):'tk-n';out+='<span class="'+cls+'">'+esc(m[0])+'</span>';last=re.lastIndex;if(m[0]==='')re.lastIndex++}
+      c.innerHTML=out+esc(src.slice(last));
+      var b=document.createElement('button');b.type='button';b.className='copy-code';b.textContent='Copy';b.addEventListener('click',function(){try{navigator.clipboard.writeText(src).then(function(){b.textContent='Copied'},function(){b.textContent='Select & copy'})}catch(e){b.textContent='Select & copy'}setTimeout(function(){b.textContent='Copy'},1800)});c.parentNode.appendChild(b)});
+    var idx=document.getElementById('blog-index'),rd=document.getElementById('reading'),posts=[].slice.call(document.querySelectorAll('.post')),prev=document.getElementById('prev-post'),next=document.getElementById('next-post');
+    function pn(a,el,label,cls){if(!el){a.hidden=true;return}a.hidden=false;a.className='card pn '+cls;a.href='#'+el.id;a.innerHTML='<small></small><b></b>';a.querySelector('small').textContent=label;a.querySelector('b').textContent=el.querySelector('h2').textContent}
+    window.__openPost=function(id){var t=document.getElementById(id);if(!t)return false;posts.forEach(function(x){x.hidden=x!==t});idx.hidden=true;rd.hidden=false;var i=posts.indexOf(t);pn(prev,posts[i-1],'← Previous','prev');pn(next,posts[i+1],'Next →','next');document.getElementById('share-note').textContent='';return true};
+    window.__closePost=function(){idx.hidden=false;rd.hidden=true};
+    document.getElementById('share-post').addEventListener('click',function(){var t=posts.filter(function(x){return !x.hidden})[0],note=document.getElementById('share-note');if(!t)return;var link=(location.protocol.indexOf('http')===0?location.origin+location.pathname:'https://henry970.github.io/')+'#'+t.id;try{navigator.clipboard.writeText(link).then(function(){note.textContent='Link copied. Paste it on LinkedIn or anywhere.'},function(){note.textContent=link})}catch(e){note.textContent=link}});
+  })();
+
+
+  /* ---------- fun ---------- */
+  var toastEl=document.getElementById('toast'),tt;
+  function toast(t){toastEl.textContent=t;toastEl.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('show')},3200)}
+  var fx=document.getElementById('fx'),fctx=fx&&fx.getContext&&fx.getContext('2d'),parts=[],fxOn=false;
+  function confetti(x,y,n){if(reduce||!fctx)return;var d=Math.min(2,devicePixelRatio||1);fx.width=innerWidth*d;fx.height=innerHeight*d;fctx.setTransform(d,0,0,d,0,0);
+    var cols=['#A855F7','#6366F1','#22D3EE','#4ADE80','#FBBF24','#F472B6'];for(var i=0;i<(n||120);i++){var a=Math.random()*Math.PI*2,v=4+Math.random()*7;parts.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-4,r:3+Math.random()*4,c:cols[i%cols.length],l:70+Math.random()*40,rot:Math.random()*6})}
+    if(!fxOn){fxOn=true;requestAnimationFrame(tick)}}
+  function tick(){fctx.clearRect(0,0,innerWidth,innerHeight);parts=parts.filter(function(p){return p.l-->0});parts.forEach(function(p){p.vy+=.18;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.rot+=.2;fctx.save();fctx.globalAlpha=Math.min(1,p.l/30);fctx.translate(p.x,p.y);fctx.rotate(p.rot);fctx.fillStyle=p.c;fctx.fillRect(-p.r,-p.r/2,p.r*2,p.r);fctx.restore()});if(parts.length)requestAnimationFrame(tick);else{fxOn=false;fctx.clearRect(0,0,innerWidth,innerHeight)}}
+  window.__confetti=confetti;
+
+  /* the QA core runs the tests */
+  var core=document.getElementById('core');
+  if(core){var orb=core.closest('.orbit'),sub=document.getElementById('core-sub'),busy=false;
+    core.addEventListener('click',function(){if(busy)return;busy=true;orb.classList.remove('passed');orb.classList.add('running');sub.textContent='running…';
+      setTimeout(function(){orb.classList.remove('running');orb.classList.add('passed');sub.textContent='all green ✓';var r=core.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2,90);toast('All checks passed. Ship it! 🚀');
+        setTimeout(function(){orb.classList.remove('passed');sub.textContent='click to run tests';busy=false},4000)},1800)})}
+
+  /* ---------- the bug family ---------- */
+  var squashed=0,alive=0,bash=null,sc=document.getElementById('score'),scn=document.getElementById('score-n'),best=0;
+  try{best=+localStorage.getItem('bugbash-best')||0}catch(e){}
+  function bugSvg(body,head){return '<svg viewBox="0 0 48 48" aria-hidden="true"><g class="legs" stroke="#2A1F3D" stroke-width="2.6" stroke-linecap="round"><path d="M14 18 6 13M13 25H4M14 32l-8 5M34 18l8-5M35 25h9M34 32l8 5"/></g><ellipse cx="24" cy="27" rx="11" ry="13" fill="'+body+'"/><path d="M24 14v26" stroke="'+head+'" stroke-width="2"/><circle cx="24" cy="12" r="6" fill="'+head+'"/><circle cx="19" cy="24" r="2.4" fill="'+head+'"/><circle cx="29" cy="24" r="2.4" fill="'+head+'"/><circle cx="20" cy="33" r="2.2" fill="'+head+'"/><circle cx="28" cy="33" r="2.2" fill="'+head+'"/><path d="M21 7l-3-4M27 7l3-4" stroke="'+head+'" stroke-width="2" stroke-linecap="round"/></svg>'}
+  var TYPES=[
+    {k:'null',name:'Null pointer',body:'#E11D48',head:'#2A1F3D',speed:1,msg:'Null pointer squashed! 🐞 Nice reflexes.'},
+    {k:'race',name:'Race condition',body:'#22C55E',head:'#052E16',speed:2.3,msg:'Race condition caught! ⚡ You were faster.'},
+    {k:'flaky',name:'Flaky test',body:'#A855F7',head:'#2E1065',speed:1.1,flaky:true,msg:'Flaky test fixed! It finally fails every time 😄'},
+    {k:'leak',name:'Memory leak',body:'#3B82F6',head:'#172554',speed:.8,grow:true,msg:'Memory leak plugged! 💧 RAM says thanks.'},
+    {k:'heisen',name:'Heisenbug',body:'#FACC15',head:'#422006',speed:1.2,dodge:true,msg:'Heisenbug observed AND squashed! 🔬 Rare.'},
+    {k:'obo',name:'Off-by-one',body:'#F97316',head:'#431407',speed:1.3,split:true,msg:'Off-by-one… wait, there’s one more! 🔢'}];
+  function pick(){return TYPES[Math.floor(Math.random()*TYPES.length)]}
+  function addScore(e,ty){squashed++;scn.textContent=squashed;sc.hidden=false;confetti(e.clientX,e.clientY,ty&&ty.k==='heisen'?70:36);if(bash){bash.n++;bash.el.textContent=bash.n}}
+  function crawl(ty,opts){if(reduce||document.hidden)return;opts=opts||{};if(!bash&&alive>=2)return;ty=ty||pick();alive++;
+    var b=document.createElement('button');b.type='button';b.className='crawler bug-'+ty.k;b.title=ty.name;b.setAttribute('aria-label',ty.name+' bug. Click to squash it');b.innerHTML=bugSvg(ty.body,ty.head);
+    var size=opts.size||46;b.style.width=b.style.height=size+'px';document.body.appendChild(b);
+    var W=innerWidth,H=innerHeight,fromLeft=opts.x!=null?Math.random()<.5:Math.random()<.5,y0=opts.y!=null?opts.y:H*(.18+Math.random()*.64),y1=H*(.15+Math.random()*.7),x0=opts.x!=null?opts.x:(fromLeft?-60:W+60),x1=fromLeft?W+60:-60;
+    var base=(bash?6500:11000)/ty.speed*(0.85+Math.random()*.3),t0=null,dead=false,raf,hits=0,ox=0,oy=0,px=-999,py=-999;
+    function onMove(e){px=e.clientX;py=e.clientY}
+    if(ty.dodge)addEventListener('pointermove',onMove,{passive:true});
+    function step(t){if(dead)return;if(!t0)t0=t;var k=(t-t0)/base;if(k>=1){cleanup();return}
+      var x=x0+(x1-x0)*k,y=y0+(y1-y0)*k+Math.sin(k*18)*22;
+      if(ty.dodge){var dx=x+ox-px,dy=y+oy-py,d=Math.hypot(dx,dy);if(d<110&&d>0){ox+=dx/d*7;oy+=dy/d*7}ox*=.97;oy*=.97;x+=ox;y+=oy}
+      var sc2=ty.grow?1+k*1.4:1,ang=Math.atan2(y1-y0,x1-x0)*180/Math.PI+90,tr='translate('+x+'px,'+y+'px) rotate('+ang+'deg) scale('+sc2+')';
+      b.style.transform=tr;b.style.setProperty('--t',tr);
+      if(ty.flaky)b.style.opacity=(Math.sin(t/140)>-.2)?1:.15;
+      raf=requestAnimationFrame(step)}
+    function cleanup(){dead=true;cancelAnimationFrame(raf);b.remove();alive=Math.max(0,alive-1);if(ty.dodge)removeEventListener('pointermove',onMove)}
+    raf=requestAnimationFrame(step);
+    b.addEventListener('click',function(e){if(dead)return;
+      if(ty.flaky&&hits===0&&Math.random()<.5){hits++;toast('Flaky! It passed this time. Try again 😅');return}
+      dead=true;cancelAnimationFrame(raf);b.classList.add('splat');addScore(e,ty);
+      if(!bash||ty.k==='heisen')toast(squashed===1&&!bash?ty.msg+' A bug counter is now in the footer.':ty.msg);
+      if(ty.split&&!opts.child){var r=b.getBoundingClientRect();setTimeout(function(){crawl(TYPES[0],{x:r.left,y:r.top,size:34,child:true})},150)}
+      setTimeout(function(){b.remove();alive=Math.max(0,alive-1);if(ty.dodge)removeEventListener('pointermove',onMove)},650)});
+  }
+  window.__crawl=crawl;
+  if(!reduce){setTimeout(function(){crawl()},6000);setInterval(function(){if(!bash&&Math.random()<.7)crawl()},16000)}
+
+  /* ---------- Bug Bash mini-game ---------- */
+  var bb=document.getElementById('bugbash');
+  function rank(n){return n>=18?'Head of QA 👑':n>=12?'Senior QA Engineer 🏆':n>=7?'QA Engineer 💪':n>=3?'Junior Tester 🌱':'Intern. Coffee first? ☕'}
+  if(bb){if(reduce){bb.hidden=true}else{
+    var bst=document.getElementById('bb-best');if(best)bst.textContent='Best: '+best;
+    bb.addEventListener('click',function(){if(bash)return;
+      var hud=document.getElementById('bb-hud');hud.hidden=false;var left=20,tEl=document.getElementById('bb-time');
+      bash={n:0,el:document.getElementById('bb-n')};bash.el.textContent='0';tEl.textContent=left;bb.disabled=true;
+      toast('Bug bash! Squash as many as you can in 20 seconds 🐞');
+      var spawn=setInterval(function(){crawl();if(Math.random()<.5)crawl()},700);
+      var tick=setInterval(function(){left--;tEl.textContent=left;if(left<=0){clearInterval(tick);clearInterval(spawn);
+        var n=bash.n;bash=null;bb.disabled=false;hud.hidden=true;document.querySelectorAll('.crawler:not(.splat)').forEach(function(x){x.remove()});alive=0;
+        var msg='Time! '+n+' bug'+(n===1?'':'s')+' squashed. Rank: '+rank(n);
+        if(n>best){best=n;try{localStorage.setItem('bugbash-best',String(n))}catch(e){}bst.textContent='Best: '+best;msg+=' New best!';confetti(innerWidth/2,innerHeight/2,180)}
+        toast(msg)}},1000);
+    })}}
+
+  /* hello, devtools */
+  try{console.log('%c👋 Hey, opening devtools? Spoken like a true tester.','font:700 14px sans-serif;color:#A855F7');console.log('Henry Okolie · github.com/henry970 · okoliehenry91@gmail.com')}catch(e){}
+
+  /* contact form */
+  var form=document.getElementById('form');
+  if(form){var err=document.getElementById('f-err'),out=document.getElementById('out'),txt=document.getElementById('out-text'),c2=document.getElementById('copied2');
+    form.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('f-name').value.trim(),m=document.getElementById('f-email').value.trim(),msg=document.getElementById('f-msg').value.trim();
+      if(!n||!m||!msg){err.textContent='Please fill in your name, email and message.';return}
+      if(!/^\S+@\S+\.\S+$/.test(m)){err.textContent='That email address looks incomplete. Check it and try again.';return}
+      err.textContent='';txt.textContent='Hi Henry,\n\n'+msg+'\n\n'+n+'\n'+m;out.hidden=false;c2.textContent=''});
+    document.getElementById('copy-msg').addEventListener('click',function(){try{navigator.clipboard.writeText(txt.textContent).then(function(){c2.textContent='Message copied.'},function(){c2.textContent='Select the text and press Ctrl+C.'})}catch(x){c2.textContent='Select the text and press Ctrl+C.'}})}
+
+  /* pages */
+  var pages=['home','skills','projects','experience','blog','contact'],navA=[].slice.call(document.querySelectorAll('.links a, footer nav a'));
+  function route(){var h=(location.hash||'').slice(1),target=null;
+    if(pages.indexOf(h)<0){var el=h&&document.getElementById(h);var v=el&&el.closest&&el.closest('.view');target=v?v.id.slice(2):'home'}else{target=h;el=null}
+    pages.forEach(function(p){var v=document.getElementById('v-'+p);if(v)v.hidden=(p!==target)});
+    document.querySelectorAll('dialog[open]').forEach(function(d){d.close&&d.close()});
+    navA.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+target)});
+    if(target==='blog'&&window.__closePost)window.__closePost();
+    if(h.indexOf('post-')===0&&window.__openPost&&window.__openPost(h)){window.scrollTo(0,0);var cv=document.getElementById('v-blog');requestAnimationFrame(function(){window.__revealView&&window.__revealView(cv);prog&&prog()});return}
+    if(el&&pages.indexOf(h)<0){el.scrollIntoView()}else{window.scrollTo(0,0)}
+    var cur=document.getElementById('v-'+target);requestAnimationFrame(function(){window.__revealView&&window.__revealView(cur);prog&&prog()})}
+  addEventListener('hashchange',route);route();
+})();
+</script>
+
+</body>
+</html>
